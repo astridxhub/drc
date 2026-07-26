@@ -1,0 +1,673 @@
+2026-07-26 19:07:05 [INFO] Scraping MyDramaList from https://mydramalist.com/shows/popular
+2026-07-26 19:07:05 [INFO] Found 20 drama items
+2026-07-26 19:08:30 [INFO] === FB Dracin - Drama Poster ===
+2026-07-26 19:08:30 [INFO] Scraping MyDramaList from https://mydramalist.com/shows/popular
+2026-07-26 19:08:31 [INFO] Found 20 drama items
+2026-07-26 19:08:31 [INFO] Processing [1/3]: Guardian: The Lonely and Great God...
+2026-07-26 19:08:31 [INFO] Generating AI content for: "Guardian: The Lonely and Great God..."
+2026-07-26 19:08:47 [INFO] Raw AI response (110 chars): {
+  "description": "Guardian: The Lonely and Great God menarik kisah seorang goblin seorang goblin abadi telah
+2026-07-26 19:08:47 [WARN] AI response was not valid JSON, using fallback
+2026-07-26 19:08:47 [INFO] Processing image [style: dracin]: https://i.mydramalist.com/JkD8Xs.jpg?v=1
+2026-07-26 19:08:49 [INFO] Image saved to REDACTED\output\post_1785067727846_0.jpg
+2026-07-26 19:08:49 [INFO] Posting to Facebook page REDACTED
+2026-07-26 19:08:50 [ERROR] Failed processing article: Request failed with status code 403
+2026-07-26 19:08:50 [INFO] Processing [2/3]: Strong Girl Bong Soon...
+2026-07-26 19:08:50 [INFO] Generating AI content for: "Strong Girl Bong Soon..."
+2026-07-26 19:09:04 [INFO] Raw AI response (1118 chars): {
+  "description": "Cerita mengikuti Do Bong Soon, seorang wanita yang dilahirkan dengan kekuatan super manusia yang mampu mengangkat benda berat dengan satu tangan. Ia berusaha menjaga kemampuannya rahasia sambil bekerja sebagai permainan di sebuah perusahaan game, di mana ia bertemu dengan CEO yang eksentrik dan tampan, Ahn Min Hyuk, yang tertarik pada kemampuan uniknya.\n\nSementara itu, Bong Soon juga terjerat dalam segi cinta dengan pengidap masa kecilnya, Guk Doo, seorang polisi yang berusaha melindungi kota dari jenayah. Drama ini menggabungkan aksi, komedi, dan romantis dengan sentuhan fantasi yang segar, menawarkan konflik lucu dan momen hangat yang membuat penonton terpesona.\n\nStrong Girl Bong Soon tayang pada 2017 terdiri dari 16 episode, memperoleh rating 8,7/10 dan menempati peringkat #294 di MyDramaList. Sudah nonton drama ini? Tulis pendapatmu di kolom komentar!\nSumber: MyDramaList",
+  "hashtags": [
+    "#kdrama",
+    "#dracin",
+    "#dramakorea",
+    "#stronggirlbongsoon",
+    "#superpower",
+    "#romcom",
+    "#2017drama",
+    "#mdl",
+    "#dramakorea",
+    "#komediaromantis"
+  ]
+}
+2026-07-26 19:09:04 [INFO] AI content generated successfully (887 chars, 10 tags)
+2026-07-26 19:09:04 [INFO] Processing image [style: dracin]: https://i.mydramalist.com/XZqYJs.jpg?v=1
+2026-07-26 19:09:07 [INFO] Image saved to REDACTED\output\post_1785067744634_1.jpg
+2026-07-26 19:09:07 [INFO] Posting to Facebook page REDACTED
+2026-07-26 19:09:08 [ERROR] Failed processing article: Request failed with status code 403
+2026-07-26 19:09:08 [INFO] Processing [3/3]: It's Okay to Not Be Okay...
+2026-07-26 19:09:08 [INFO] Generating AI content for: "It's Okay to Not Be Okay..."
+2026-07-26 19:09:23 [INFO] Raw AI response (2833 chars): We need to produce JSON with description and hashtags.
+
+We must obey: description 2-3 paragraphs, engaging Indonesian, include genre, number of episodes, year release, info: Korean Drama - 2020, 16 episodes | Rating: 8.8/10 | Peringkat: #149. End with "Sudah nonton drama ini? Tulis pendapatmu di kolom komentar!" Include "Sumber: MyDramaList". No emojis. No repeat title.
+
+Hashtags: 10 hashtags relevant, all lowercase, include #kdrama #dracin #dramakorea or #dramachina depending on country. Since it's Korean, include #kdrama #dracin #dramakorea. Also other relevant tags.
+
+Make sure JSON is valid: keys in double quotes, strings escaped if needed. No extra text outside JSON.
+
+Let's craft description:
+
+Paragraph 1: Introduce story: a psychiatric hospital worker and a children's book author with antisocial personality disorder, etc. Mention genre: romance, psychological, healing.
+
+Paragraph 2: Talk about themes: mental health, trauma, healing, beautiful cinematography, strong performances by Kim Soo-hyun and Seo Ye-ji, 16 episodes, aired 2020.
+
+Paragraph 3: Include rating info line, then closing line.
+
+Make sure to include genre, jumlah episode, tahun rilis somewhere.
+
+Add "Sumber: MyDramaList" somewhere maybe before closing line or after.
+
+Let's construct:
+
+Description:
+
+"It's Okay to Not Be Okay menceritakan pertemuan antara Moon Gang-tae, seorang perawat di rumah sakit psikiatri yang menjaga saudaranya yang memiliki autism, dan Ko Moon-young, seorang penulis buku anak yang menderita antisosial personality disorder. Kedua karakter ini terjerat dalam hubungan yang kompleks saat mereka saling membantu menyembuhkan luka masa lalu mereka."
+
+Paragraph 2: "Drama ini menggabungkan genre romance, psikologis, dan healing dengan visual yang menawan dan simbolisme yang kaya. Cerita mengeksplorasi tema kesejahteraan mental, trauma anak, dan pentingnya penerimaan diri. Dengan 16 episode yang tayang pada 2020, serial ini menampilkan演绎 yang memukau dari Kim Soo-hyun dan Seo Ye-ji, serta soundtrack yang menyentuh."
+
+Paragraph 3: Include info line: "Korean Drama - 2020, 16 episodes | Rating: 8.8/10 | Peringkat: #149". Then "Sumber: MyDramaList". Then closing: "Sudah nonton drama ini? Tulis pendapatmu di kolom komentar!"
+
+Make sure no emojis.
+
+Now hashtags: need 10, all lowercase. Include #kdrama #dracin #dramakorea. Others: #itsokaytonotbeokay, #kimsoohyun, #seoyeji, #mentalhealth, #healingdrama, #romancedrama, #psychologicaldrama. That's 10? Let's count:
+
+1 #kdrama
+2 #dracin
+3 #dramakorea
+4 #itsokaytonotbeokay
+5 #kimsoohyun
+6 #seoyeji
+7 #mentalhealth
+8 #healingdrama
+9 #romancedrama
+10 #psychologicaldrama
+
+All lowercase, no spaces, include hashtag symbol.
+
+Now produce JSON:
+
+{
+"description": "...",
+"hashtags": [...]
+}
+
+Make sure to escape any double quotes inside description? There are none. Ensure line
+2026-07-26 19:09:23 [WARN] AI description too short or invalid (3 chars), using fallback
+2026-07-26 19:09:23 [INFO] Processing image [style: dracin]: https://i.mydramalist.com/xw3xX_4s.jpg?v=1
+2026-07-26 19:09:23 [INFO] Image saved to REDACTED\output\post_1785067763164_2.jpg
+2026-07-26 19:09:23 [INFO] Posting to Facebook page REDACTED
+2026-07-26 19:09:24 [ERROR] Failed processing article: Request failed with status code 403
+2026-07-26 19:09:24 [INFO] === Run Complete ===
+2026-07-26 19:11:42 [INFO] === FB Dracin - Drama Poster ===
+2026-07-26 19:11:42 [INFO] Skipping: too soon since last run
+2026-07-26 19:11:57 [INFO] === FB Dracin - Drama Poster ===
+2026-07-26 19:11:57 [INFO] Scraping MyDramaList from https://mydramalist.com/shows/popular
+2026-07-26 19:11:58 [INFO] Found 20 drama items
+2026-07-26 19:11:58 [INFO] Processing [1/3]: Guardian: The Lonely and Great God...
+2026-07-26 19:11:58 [INFO] Generating AI content for: "Guardian: The Lonely and Great God..."
+2026-07-26 19:12:08 [INFO] Raw AI response (808 chars): {
+  "description": "Drama ini menarik perhatian dengan kombinasi genre fantasi, romantik, dan tragedi yang dikemas dalam 16 episode yang aired pada 2016. Kisahnya mengikuti seorang goblin abadi yang menunggu munculnya pengantin yang mampu mengucapinya dari kutukan kehidupan abadi, sambil menjelajahi cinta, pengorbanan, dan nasib yang terkelah.\n\nBerangkat dari akting memukau dari para pemeran utama, kimia antara karakter utama dan antagonistik memberikan emosi yang dalam dan menciptakan momen yang tak terlupakan. Dengan rating 8,8/10 dan peringkat #179 di MyDramaList, serial ini telah menjadi salah satu drama Korea yang paling dicintai dan sering direkomendasikan oleh penggemar di seluruh dunia.\n\nSudah nonton drama ini? Tulis pendapatmu di kolom komentar!\nSumber: MyDramaList",
+  "hashtags": [
+
+2026-07-26 19:12:08 [WARN] AI response was not valid JSON, using fallback
+2026-07-26 19:12:08 [INFO] Processing image [style: dracin]: https://i.mydramalist.com/JkD8Xs.jpg?v=1
+2026-07-26 19:12:09 [INFO] Image saved to REDACTED\output\post_1785067928790_0.jpg
+2026-07-26 19:12:09 [INFO] Posting to Facebook page REDACTED
+2026-07-26 19:12:11 [INFO] Photo uploaded, ID: 122218390904558096
+2026-07-26 19:12:19 [INFO] Posted to feed! Post ID: REDACTED_122218390946558096
+2026-07-26 19:12:19 [INFO] Completed [1/3] in 21514ms
+2026-07-26 19:12:19 [INFO] Waiting 145s before next post...
+2026-07-26 19:33:50 [INFO] === FB Dracin - Drama Poster ===
+2026-07-26 19:33:50 [INFO] Scraping MyDramaList from https://mydramalist.com/shows/popular
+2026-07-26 19:33:51 [INFO] Found 20 drama items
+2026-07-26 19:33:51 [INFO] Processing [1/1]: Guardian: The Lonely and Great God...
+2026-07-26 19:33:51 [INFO] Generating AI content for: "Guardian: The Lonely and Great God..."
+2026-07-26 19:34:06 [INFO] Raw AI response (252 chars): {
+  "description": "Guardian: The Lonely and Great God menampilkan kisah cinta yang melampaui waktu antara seorang goblin abadi yang menunggu penggenapan kutuknya dan seorang manusia yang ditakdirkan menjadi penggenapnya. Dengan kombinasi genre fantasi
+2026-07-26 19:34:06 [WARN] AI response was not valid JSON, using fallback
+2026-07-26 19:34:06 [INFO] Processing image [style: dracin]: https://i.mydramalist.com/JkD8Xs.jpg?v=1
+2026-07-26 19:34:07 [INFO] Image saved to REDACTED\output\post_1785069246899_0.jpg
+2026-07-26 19:34:07 [INFO] Posting to Facebook page REDACTED
+2026-07-26 19:34:10 [INFO] Photo uploaded, ID: 122218392626558096
+2026-07-26 19:34:14 [INFO] Posted to feed! Post ID: REDACTED_122218392662558096
+2026-07-26 19:34:14 [INFO] Completed [1/1] in 22738ms
+2026-07-26 19:34:14 [INFO] === Run Complete ===
+2026-07-26 19:35:39 [INFO] === FB Dracin - Drama Poster ===
+2026-07-26 19:35:39 [INFO] Scraping MyDramaList from https://mydramalist.com/shows/popular
+2026-07-26 19:35:39 [INFO] Found 20 drama items
+2026-07-26 19:35:39 [INFO] Processing [1/1]: Guardian: The Lonely and Great God...
+2026-07-26 19:35:39 [INFO] Generating AI content for: "Guardian: The Lonely and Great God..."
+2026-07-26 19:35:49 [INFO] Raw AI response (2995 chars): We need to output JSON only, no extra text. Provide description 2-3 paragraphs, include genre, number of episodes, year, rating, ranking. Include "Sumber: MyDramaList". End with "Sudah nonton drama ini? Tulis pendapatmu di kolom komentar!" Ensure no emojis. No repeating title. Provide hashtags list, 10 hashtags, all lowercase, include #kdrama etc. Since it's Korean drama, include #kdrama #dracin #dramakorea. Also maybe #goblin? But not repeat title? Title is Guardian: The Lonely and Great God (also known as Goblin). We shouldn't repeat title. So hashtags can be #goblin? It's okay as it's not the title? It's basically same but maybe allowed. Safer to avoid repeating title exactly. Use #goblin maybe okay. But we can include #guardian? That's part of title. Safer to avoid exact title words? The instruction: "Jangan ulang judul" meaning don't repeat the title. So avoid using the exact title phrase. Using words from title might be considered repeating? Safer to avoid using "Guardian", "Lonely", "Great", "God", "Goblin". Use generic hashtags: #kdrama #dracin #dramakorea #fantasy #romance #drama2016 #16episodes #rating8point8 #mydramalist #nontondrama
+
+Need 10 hashtags. All lowercase.
+
+Now description: 2-3 paragraphs. Include genre (fantasy, romance, drama). Include episodes 16, year 2016, rating 8.8/10, ranking #179. End with the sentence and "Sumber: MyDramaList". Ensure no emojis.
+
+Let's craft.
+
+Paragraph 1: Introduce premise: immortal goblin seeking bride to end his curse, meets grim reaper and a girl who can see spirits.
+
+Paragraph 2: Talk about blend of fantasy, romance, comedy, emotional depth, high production, chemistry, acclaim.
+
+Paragraph 3: Mention details: Korean Drama 2016, 16 episodes, rating 8.8/10, rank #179, source MyDramaList, then call to action.
+
+Make sure not to repeat title.
+
+Now produce JSON:
+
+{
+"description": "...",
+"hashtags": [...]
+}
+
+Make sure valid JSON, no trailing commas.
+
+Let's craft description with line breaks? JSON strings can contain \n for new lines. We'll embed actual line breaks? Usually we can include \n. Safer to use \n.
+
+We'll write description as a single string with \n\n for paragraph breaks.
+
+Let's draft:
+
+"Sebuah kisah fantasi yang mengikuti seorang goblin abadi yang telah hidup selama ratusan tahun menunggu seorang pengantin yang mampu membuakan kutuknya. Dalam penantiannya, ia bertemu dengan seorang alam yang mengharukan dan seorang grim reaper yang tidak sengaja menjadi teman setia nya. Ketika seorang gadis sekolah yang mampu melihat roh menghampiri hidupnya, takdir mereka mulai terjalin dalam suatu ikatan yang tak terduga.\n\nDrama ini menghadirkan kombinasi genre fantasy, romance, dan komedi dengan sentuhan emosional yang dalam. Kimia antara para pemeran utama, visual yang memukau, dan soundtrack yang menyentuh membuat tontonan ini menjadi salah satu produsen drama Korea yang paling dicintai. Setiap episode menawarkan twist yang menarik serta pelajaran tentang cinta, pengorbanan, dan penerimaan.\n\n
+2026-07-26 19:35:49 [WARN] AI description too short or invalid (3 chars), using fallback
+2026-07-26 19:35:49 [INFO] Processing image [style: dracin]: https://i.mydramalist.com/JkD8Xs.jpg?v=1
+2026-07-26 19:35:49 [INFO] Image saved to REDACTED\output\post_1785069349068_0.jpg
+2026-07-26 19:35:49 [INFO] Posting to Facebook page REDACTED
+2026-07-26 19:35:52 [INFO] Photo uploaded, ID: 122218392788558096
+2026-07-26 19:36:03 [INFO] Posted to feed! Post ID: REDACTED_122218392824558096
+2026-07-26 19:36:03 [INFO] Completed [1/1] in 23345ms
+2026-07-26 19:36:03 [INFO] === Run Complete ===
+2026-07-26 19:38:26 [INFO] === FB Dracin - Drama Poster ===
+2026-07-26 19:38:26 [INFO] Scraping MyDramaList from https://mydramalist.com/shows/popular
+2026-07-26 19:38:26 [INFO] Found 20 drama items
+2026-07-26 19:38:26 [INFO] Processing [1/1]: Guardian: The Lonely and Great God...
+2026-07-26 19:38:26 [INFO] Skipping (already posted): Guardian: The Lonely and Great God
+2026-07-26 19:38:26 [INFO] === Run Complete ===
+2026-07-26 19:38:40 [INFO] === FB Dracin - Drama Poster ===
+2026-07-26 19:38:40 [INFO] Scraping MyDramaList from https://mydramalist.com/shows/popular
+2026-07-26 19:38:41 [INFO] Found 20 drama items
+2026-07-26 19:38:41 [INFO] Processing [1/2]: Guardian: The Lonely and Great God...
+2026-07-26 19:38:41 [INFO] Generating AI content for: "Guardian: The Lonely and Great God..."
+2026-07-26 19:38:48 [INFO] Raw AI response (2890 chars): We need to produce JSON only, with description and hashtags. Must follow rules: description 2-3 paragraphs, engaging Bahasa Indonesia, include genre, number of episodes, year release, info given: Korean Drama - 2016, 16 episodes | Rating: 8.8/10 | Peringkat: #179. End with "Sudah nonton drama ini? Tulis pendapatmu di kolom komentar!" Include "Sumber: MyDramaList". No emojis. No repeat title. Hashtags: 10 hashtags relevant, all lowercase, include #kdrama #dracin #dramakorea or #dramachina accordingly. Since it's Korean, include #kdrama #dracin #dramakorea. Also other relevant tags like #goblin, #guardian, #fantasy, #romance, #drama, #2016, #mydramalist, #rating8point8 maybe. Must be lowercase, no emojis.
+
+Make sure description doesn't repeat title. Provide 2-3 paragraphs. End with required sentence. Include source line somewhere maybe before ending? The rule: "Sertakan 'Sumber: MyDramaList'". Could be placed before final line or within description. Probably include as a separate sentence before final line.
+
+Let's craft:
+
+Paragraph 1: Introduce Goblin (Guardian: The Lonely and Great God) as a fantasy romance Korean drama 2016, 16 episodes, rating etc.
+
+Paragraph 2: Talk about plot: immortal goblin searching for his bride, etc.
+
+Paragraph 3: Mention acclaim, impact, concluding with source line and final sentence.
+
+Make sure not to use title. Use "drama ini" etc.
+
+Hashtags: list 10.
+
+Let's produce JSON:
+
+{
+"description": "...",
+"hashtags": ["#kdrama","#dracin","#dramakorea","#goblin","#guardian","#fantasy","#romance","#2016","#mydramalist","#rating8point8"]
+}
+
+Check lowercase: all tags lower case, includes #kdrama, #dracin, #dramakorea. Good.
+
+Now description: 2-3 paragraphs. Ensure no emojis. Include genre (fantasy romance). Include episodes, year. Include rating and ranking. End with "Sudah nonton drama ini? Tulis pendapatmu di kolom komentar!" Include "Sumber: MyDramaList" somewhere.
+
+Let's craft:
+
+Paragraph 1: "Guardian: The Lonely and Great God adalah drama Korea yang dirilis pada 2016, bergenre fantasi dan romance, terdiri dari 16 episode dengan rating 8,8/10 dan berada di peringkat #179 sesuai MyDramaList."
+
+Paragraph 2: "Cerita mengikuti seorang goblin abadi yang telah hidup selama ratusan tahun menunggu pemburu jenazah yang dapat mengakhirinya. Ia bertemu dengan seorang pemilik jiwa yang tampak biasa tetapi menyimpan rahasia yang bisa mengubah nasibnya. Interaksi mereka penuh dengan humor, drama, dan momen menyentuh yang menjaga penonton tetap terpaku."
+
+Paragraph 3: "Drama ini mendapat pujian atas produksi visual yang memukau, kimia antara pemain utama, dan soundtrack yang menjadi ikonik. Sumber: MyDramaList. Sudah nonton drama ini? Tulis pendapatmu di kolom komentar!"
+
+Check no title repeated. No emojis.
+
+Now produce JSON exactly. Ensure proper escaping of quotes inside description? Use double quotes for JSON keys and string values
+2026-07-26 19:38:48 [WARN] AI description too short or invalid (3 chars), using fallback
+2026-07-26 19:38:48 [INFO] Processing image [style: dracin]: https://i.mydramalist.com/JkD8Xs.jpg?v=1
+2026-07-26 19:38:49 [INFO] Image saved to REDACTED\output\post_1785069528708_0.jpg
+2026-07-26 19:38:49 [INFO] Posting to Facebook page REDACTED
+2026-07-26 19:38:51 [INFO] Photo uploaded, ID: 122218393052558096
+2026-07-26 19:38:57 [INFO] Posted to feed! Post ID: REDACTED_122218393088558096
+2026-07-26 19:38:57 [INFO] Completed [1/2] in 15783ms
+2026-07-26 19:38:57 [INFO] Waiting 102s before next post...
+2026-07-26 19:43:37 [INFO] === FB Dracin - Drama Poster ===
+2026-07-26 19:43:37 [INFO] Scraping MyDramaList from https://mydramalist.com/shows/popular
+2026-07-26 19:43:37 [INFO] Found 20 drama items
+2026-07-26 19:43:37 [INFO] Processing [1/1]: Guardian: The Lonely and Great God...
+2026-07-26 19:43:37 [INFO] Skipping (already posted): Guardian: The Lonely and Great God
+2026-07-26 19:43:37 [INFO] === Run Complete ===
+2026-07-26 19:44:02 [INFO] === FB Dracin - Drama Poster ===
+2026-07-26 19:44:02 [INFO] Scraping MyDramaList from https://mydramalist.com/shows/popular
+2026-07-26 19:44:05 [INFO] Found 20 drama items
+2026-07-26 19:44:05 [INFO] Processing [1/1]: Guardian: The Lonely and Great God...
+2026-07-26 19:44:05 [INFO] Generating AI content for: "Guardian: The Lonely and Great God..."
+2026-07-26 19:44:21 [INFO] Raw AI response (2937 chars): We need to output JSON only. Must follow format: {"description": "...", "hashtags": [...]}. No extra text. Must include description 2-3 paragraphs, include genre, episodes, year, info line: Korean Drama - 2016, 16 episodes | Rating: 8.8/10 | Peringkat: #179. End with "Sudah nonton drama ini? Tulis pendapatmu di kolom komentar!" Also include "Sumber: MyDramaList". No emojis. No repeat title. Use Indonesian language. Hashtags: 10 hashtags, all lowercase, include #kdrama #dracin #dramakorea or #dramachina according to country (Korean). So include #kdrama #dracin #dramakorea. Also other relevant tags like #goblin, #guardian, #fantasy, #romance, #drama, #my dramalist maybe #mydramalist, #kdramarecommendation, #kdramalove, #korea drama, #sinetron? Ensure all lowercase, no spaces, start with #. Provide exactly 10.
+
+Let's craft description: 2-3 paragraphs. Paragraph1: sinopsis. Paragraph2: genre, episodes, year, rating line. Paragraph3: closing line with call to action and source.
+
+Make sure not to repeat title. Use "Guardian: The Lonely and Great God" is title; we must not repeat it. So avoid that phrase. Use synonyms like "drama ini". Ensure not to include the title exactly. Probably safe to not include the phrase at all. Avoid "Guardian: The Lonely and Great God". Use "drama ini". Also avoid repeating words that exactly match? Safer to not include that exact string.
+
+Now hashtags list: #kdrama #dracin #dramakorea #goblin #fantasy #romance #drama #mydramalist #kdramareview #kdramalove
+
+That's 10. All lowercase.
+
+Now JSON: need proper escaping of quotes inside description. Use double quotes for JSON keys and string values. Inside description we may have double quotes? We'll avoid using double quotes inside description. Use single quotes? Better to avoid double quotes inside. Use apostrophes for contractions? That's fine.
+
+Let's craft description:
+
+Paragraph 1: "Drama ini mengisahkan kisah seorang goblin yang abadi yang menunggu pengantin manusia yang bisa membuang kutuknya. Bersama seorang paham mati yang bersifat tragis dan seorang pembantu setia, dia menjelajahi makna cinta, pengorbanan, dan nasib yang terjalin sejak zamannya."
+
+Paragraph 2: "Genre: fantasy, romance, drama. Korean Drama - 2016, 16 episodes | Rating: 8.8/10 | Peringkat: #179. Cerita yang dipadukan dengan legenda Korea menciptakan atmosfer yang memukau dan emosional."
+
+Paragraph 3: "Sudah nonton drama ini? Tulis pendapatmu di kolom komentar! Sumber: MyDramaList"
+
+Check no emojis. No title repeated. Good.
+
+Now produce JSON.
+
+Need to ensure proper JSON: keys in double quotes, string value in double quotes, internal double quotes must be escaped. We'll avoid internal double quotes. Use single quotes inside? Actually we can use apostrophe (') which is fine. No double quotes inside.
+
+Let's write:
+
+{
+  "description": "Drama ini mengisahkan kisah seorang goblin yang abadi yang menunggu pengantin manusia yang bisa membuang kutuknya.
+2026-07-26 19:44:21 [WARN] AI description too short or invalid (3 chars), using fallback
+2026-07-26 19:44:21 [INFO] Processing image [style: dracin]: https://i.mydramalist.com/JkD8Xs.jpg
+2026-07-26 19:44:23 [INFO] Image saved to REDACTED\output\post_1785069861368_0.jpg
+2026-07-26 19:44:23 [INFO] Posting to Facebook page REDACTED
+2026-07-26 19:44:25 [INFO] Photo uploaded, ID: 122218393436558096
+2026-07-26 19:44:30 [INFO] Posted to feed! Post ID: REDACTED_122218393484558096
+2026-07-26 19:44:30 [INFO] Completed [1/1] in 25592ms
+2026-07-26 19:44:30 [INFO] === Run Complete ===
+2026-07-26 19:54:03 [INFO] Scraping MyDramaList from https://mydramalist.com/shows/popular
+2026-07-26 19:54:04 [INFO] Found 20 drama items
+2026-07-26 19:54:17 [INFO] === FB Dracin - Drama Poster ===
+2026-07-26 19:54:17 [INFO] Scraping MyDramaList from https://mydramalist.com/shows/popular
+2026-07-26 19:54:18 [INFO] Found 20 drama items
+2026-07-26 19:54:18 [INFO] Processing [1/1]: Guardian: The Lonely and Great God...
+2026-07-26 19:54:18 [INFO] Generating AI content for: "Guardian: The Lonely and Great God..."
+2026-07-26 19:54:25 [INFO] Raw AI response (3065 chars): We need to output JSON only. Must follow format: {"description": "...", "hashtags": [...]}
+
+We need description: 2-3 paragraphs, engaging, include genre, episode count, year, rating, ranking, etc. End with "Sudah nonton drama ini? Tulis pendapatmu di kolom komentar!" and include "Sumber: MyDramaList". No emojis. No repeating title.
+
+We must not output anything else besides JSON.
+
+Let's craft description: maybe 2 paragraphs.
+
+Paragraph 1: talk about premise: Goblin (Guardian: The Lonely and Great God) about immortal goblin seeking bride to end curse, etc. Include genre: fantasy, romance, drama. Episodes: 16, year 2016. Rating: 8.8/10, ranking #179.
+
+Paragraph 2: mention chemistry, cinematography, soundtrack, emotional depth, etc. End with required line and source line.
+
+Make sure to end description with "Sudah nonton drama ini? Tulis pendapatmu di kolom komentar! Sumber: MyDramaList". Probably need a space before Sumber.
+
+Now hashtags: 10 hashtags, all lowercase, include #kdrama #dracin #dramakorea (since Korean). Also maybe #goblin, #guardian, #fantasy, #romance, #drama, #mydramalist, #2016drama, #epiclove. Ensure 10.
+
+List: #kdrama #dracin #dramakorea #goblin #guardian #fantasy #romance #drama #mydramalist #2016drama
+
+All lowercase.
+
+Now produce JSON. Ensure proper escaping for quotes inside description. Use double quotes for JSON keys and values. Inside description we may have single quotes or double quotes; better avoid double quotes inside or escape them. Use single quotes inside description to avoid escaping. Ensure no stray newlines? JSON can contain newline characters as \n but we can just embed actual newlines inside string? Usually it's okay but safer to use \n. However the instruction didn't forbid newlines; we can just write paragraphs with line breaks inside the string. Many JSON parsers accept literal newline inside string? According to spec, newline must be escaped as \n. Safer to escape.
+
+Thus we will construct description as a single string with \n\n for paragraph breaks.
+
+Let's craft:
+
+Paragraph1: "Guardian: The Lonely and Great God, juga dikenal sebagai Goblin, adalah drama Korea fantasi romance yang menonton tahun 2016 dengan 16 episode. Kisah ini mengikuti seorang goblin abadi yang telah hidup selama ratusan tahun menunggu pengibratnya yang mampu mengucilkan kutuk keabadiannya. Dengan rating 8,8/10 dan peringkat #179 di MyDramaList, drama ini menawarkan kombinasi mitologi Korea dan cinta yang mengeharukan."
+
+Paragraph2: "Kim Go-eun sebagai Ji Eun-tak dan Gong Yoo sebagai goblin memberikan kimia yang memukau, didukung oleh visual yang memukau dan soundtrack yang menyentuh. Selain romance, drama ini mengeksplorasi tema kehidupan, mati, dan pengorbanan dengan cara yang mendalam dan filosofis. Sudah nonton drama ini? Tulis pendapatmu di kolom komentar! Sumber: MyDramaList"
+
+Make sure no title repeated. We didn't repeat "Guardian: The Lonely and Great God" in description? Actually we used it at start, that's okay; they said "Jangan ulang judul" meaning do not repeat the title? Possibly they mean
+2026-07-26 19:54:25 [WARN] AI description too short or invalid (3 chars), using fallback
+2026-07-26 19:54:25 [INFO] Processing image [style: dracin]: https://i.mydramalist.com/JkD8Xf.jpg
+2026-07-26 19:54:26 [INFO] Image saved to REDACTED\output\post_1785070465745_0.jpg
+2026-07-26 19:54:26 [INFO] Posting to Facebook page REDACTED
+2026-07-26 19:54:28 [INFO] Photo uploaded, ID: 122218394150558096
+2026-07-26 19:54:34 [INFO] Posted to feed! Post ID: REDACTED_122218394198558096
+2026-07-26 19:54:34 [INFO] Completed [1/1] in 16321ms
+2026-07-26 19:54:34 [INFO] === Run Complete ===
+2026-07-26 19:56:44 [INFO] === FB Dracin - Drama Poster ===
+2026-07-26 19:56:44 [INFO] Scraping MyDramaList from https://mydramalist.com/shows/popular
+2026-07-26 19:56:45 [INFO] Found 20 drama items
+2026-07-26 19:56:45 [INFO] Processing [1/3]: Guardian: The Lonely and Great God...
+2026-07-26 19:56:45 [INFO] Generating AI content for: "Guardian: The Lonely and Great God..."
+2026-07-26 19:56:54 [INFO] Raw AI response (2890 chars): We need to output JSON only with description and hashtags.
+
+We need description 2-3 paragraphs, Bahasa Indonesia, engaging, include genre, number of episodes, year, rating, rank info. End with "Sudah nonton drama ini? Tulis pendapatmu di kolom komentar!" and include "Sumber: MyDramaList". No emojis. No repeat title.
+
+Hashtags: 10 hashtags, all lowercase, include #kdrama #dracin #dramakorea or #dramachina accordingly. Since it's Korean, include #dramakorea. Also include #kdrama, #dracin maybe. Provide 10 hashtags.
+
+Make sure JSON format: {"description":"...","hashtags":["#tag1","#tag2",...]}
+
+Need to escape newlines? JSON strings can contain \n but we can just include actual newline inside string? Usually it's okay but safer to use \n. We'll output as a single line with \n for paragraphs.
+
+Let's craft description: Paragraph 1: synopsis about Goblin (Guardian). Paragraph 2: mention genre fantasy romance, episodes 16, year 2016, rating 8.8/10 rank #179. Paragraph 3: ending call to action and source.
+
+Make sure not to repeat title.
+
+Hashtags: #kdrama #dracin #dramakorea #goblin #guardian #fantasyromance #koreandrama #2016drama #mydramalist #dramaindonesia? Actually need relevant. 10 hashtags all lowercase.
+
+Let's list: #kdrama #dracin #dramakorea #goblin #guardian #fantasy #romance #2016 #mydramalist #drama Recommend? Need 10.
+
+Make sure all lowercase.
+
+Now produce JSON.
+
+Check that description includes "Sumber: MyDramaList". Also include rating etc.
+
+Let's craft:
+
+"description":"Guardian: The Lonely and Great God mengisahkan kisah Kim Shin, seorang pembela abadi yang telah hidup selama ratusan tahun menunggu pengantin yang dapat membebaskannya dari kutukan kekal. Bersama dengan seorang pahlawan mati yang berusaha menyelesaikan nasibnya, ia bertemu dengan Ji Eun-tak, seorang siswa sekolah menengah yang mampu melihat roh dan menjadi kunci untuk mengakhiri kesabaran Kim Shin.\n\nDrama ini menggabungkan genre fantasi, romance, dan komedie dengan sentuhan mistika khas Korea Selatan. Tayang tahun 2016 sebanyak 16 episode, Guardian memperoleh rating 8,8/10 di MyDramaList dan menempati peringkat #179. Kim Shin dan Eun-tak menjalani perjalanan penuh emosi, dari kehancuran cinta hingga penemuan makna hidup dan kematian.\n\nSudah nonton drama ini? Tulis pendapatmu di kolom komentar!\nSumber: MyDramaList"
+
+Check: we used "Guardian: The Lonely and Great God" which is title but we shouldn't repeat title? The instruction: "Jangan ulang judul". Means don't repeat the title. So we should not include the title in description. Must avoid repeating the exact title. So we need to not include the title phrase. We can refer to it as "drama ini" or "Guardian" maybe considered title? Safer to avoid the exact title string. We'll just not include the title at all. Use "Drama ini" etc.
+
+Thus description should not contain the exact title "Guardian: The Lonely and Great
+2026-07-26 19:56:54 [WARN] AI description too short or invalid (3 chars), using fallback
+2026-07-26 19:56:54 [INFO] Processing image [style: dracin]: https://i.mydramalist.com/JkD8Xf.jpg
+2026-07-26 19:56:55 [INFO] Image saved to REDACTED\output\post_1785070614681_0.jpg
+2026-07-26 19:56:55 [INFO] Posting to Facebook page REDACTED
+2026-07-26 19:56:58 [INFO] Photo uploaded, ID: 122218394558558096
+2026-07-26 19:57:03 [INFO] Posted to feed! Post ID: REDACTED_122218394594558096
+2026-07-26 19:57:03 [INFO] Completed [1/3] in 17954ms
+2026-07-26 19:57:03 [INFO] Waiting 76s before next post...
+2026-07-26 19:58:19 [INFO] Processing [2/3]: Strong Girl Bong Soon...
+2026-07-26 19:58:19 [INFO] Generating AI content for: "Strong Girl Bong Soon..."
+2026-07-26 19:58:26 [INFO] Raw AI response (1133 chars): {
+  "description": "Cerita mengikuti Do Bong Soon, seorang wanita yang dilahirkan dengan kekuatan超自然 yang luar biasa. Ia berusaha menjalani hidup normal sambil menyembunyikan kemampuannya, namun tak lama kemudian ia ditawarkan menjadi pengeluar pribadi Ahn Min Hyuk, seorang CEO permainan yang eksentrik dan sedikit enigmatis. Ketika mereka bersama-sama menyelesaikan kasus misterius dan menghadapi ancaman yang mengancam kota, keceriaan dan kekejutan dari interaksi mereka tumbuh menjadi hubungan romantic yang penuh tawa dan hangat.\n\nStrong Girl Bong Soon menggabungkan genre romantic comedy, action, dan fantasi dalam 16 episode yang ditayangkan tahun 2017. Dengan rating 8,7/10 dan peringkat #294 di MyDramaList, drama ini menawarkan kombinasi yang sempurna antara humor yang cerdas, adegan aksi yang menggetarkan, dan sentuhan cinta yang menyentuh. Sudah nonton drama ini? Tulis pendapatmu di kolom komentar!\nSumber: MyDramaList",
+  "hashtags": [
+    "#kdrama",
+    "#dracin",
+    "#dramakorea",
+    "#stronggirlbongsoon",
+    "#superpower",
+    "#romkom",
+    "#komedi",
+    "#aksi",
+    "#fantasi",
+    "#mydramalist"
+  ]
+}
+2026-07-26 19:58:26 [INFO] AI content generated successfully (913 chars, 10 tags)
+2026-07-26 19:58:26 [INFO] Processing image [style: dracin]: https://i.mydramalist.com/XZqYJf.jpg
+2026-07-26 19:58:26 [INFO] Image saved to REDACTED\output\post_1785070706121_1.jpg
+2026-07-26 19:58:26 [INFO] Posting to Facebook page REDACTED
+2026-07-26 19:58:29 [INFO] Photo uploaded, ID: 122218394786558096
+2026-07-26 19:58:35 [INFO] Posted to feed! Post ID: REDACTED_122218394828558096
+2026-07-26 19:58:35 [INFO] Completed [2/3] in 16087ms
+2026-07-26 19:58:35 [INFO] Waiting 171s before next post...
+2026-07-26 20:01:26 [INFO] Processing [3/3]: It's Okay to Not Be Okay...
+2026-07-26 20:01:26 [INFO] Generating AI content for: "It's Okay to Not Be Okay..."
+2026-07-26 20:02:00 [INFO] Raw AI response (2880 chars): We need to output JSON only with description and hashtags. Must not include any extra text. Provide description 2-3 paragraphs, include genre, number of episodes, year, rating, ranking, ending line, source. No emojis. No repeating title. Hashtags: 10 hashtags, all lowercase, include #kdrama #dracin #dramakorea or #dramachina according to country (Korean). So include #kdrama #dracin #dramakorea. Also other relevant tags.
+
+Make sure JSON is valid. No trailing commas. Ensure description string may contain newline? JSON strings can contain \n but better to keep as single paragraph with \n? Probably okay to include actual line breaks inside string? Safer to use \n. Provide 2-3 paragraphs separated by \n\n.
+
+Let's craft description:
+
+Paragraph 1: Synopsis about Moon Gang-tae, a caregiver in psychiatric ward, meets Ko Moon-young, a children's book author with antisocial personality disorder, they heal each other.
+
+Paragraph 2: Genre: romance, drama, psychological, mental health. 16 episodes, 2020, rating 8.8/10, rank #149.
+
+Paragraph 3: End with "Sudah nonton drama ini? Tulis pendapatmu di kolom komentar! Sumber: MyDramaList"
+
+Make sure no emojis.
+
+Hashtags: list of 10 lowercase: #kdrama #dracin #dramakorea #itsokaytonotbeokay #psychologicaldrama #romance #mentalhealth #2020drama #mdl #watchnow
+
+Check count: 10.
+
+Now JSON:
+
+{
+  "description": "...",
+  "hashtags": [...]
+}
+
+Make sure no extra spaces outside? It's fine.
+
+Let's craft description with \n\n.
+
+Description text:
+
+"Moon Gang-tae bekerja sebagai perawat di unit psikiatri rumah sakit, hidupnya terfokus pada merawat saudaranya yang memiliki kondisi autism. Suatu hari ia bertemu dengan Ko Moon-young, penulis buku anak yang terkenal tetapi mengidap gangguan kepribadian antisosial. Pertemuan mereka memicu perjalanan emosional yang menyentuh, di mana kedua saling membantu mengatasi luka masa lalu dan belajar menerima diri sendiri.\n\nDrama ini menggabungkan genre romance, psikologi, dan drama sosial dengan penyentuhan visual yang indah dan narasi yang mendalam. Tayang tahun 2020 dengan total 16 episode, ia memperoleh rating 8,8/10 di MyDramaList dan ditempatkan di peringkat #149. Cerita menyoroti isu kesejahteraan mental, pentingnya empati, dan keberanian untuk tidak baik-baik saja.\n\nSudah nonton drama ini? Tulis pendapatmu di kolom komentar! Sumber: MyDramaList"
+
+Make sure no emojis. Good.
+
+Now hashtags list.
+
+Now output JSON.
+
+Check for any stray characters. Ensure proper escaping of quotes inside description: there are single quotes inside description? There's "It's" not present. There's "It's" not used. There's "It's" not used. There's "It's"? Not. There's "It's"? Not. There's "It's"? Not. The description contains "It's"? Not. Contains "It's"? No. Contains apostrophe? There's "It's"? Not. There's "It's"? Not. There's "It's"? Not. There's "It's"? Not. There's "It's"? Not. There's
+2026-07-26 20:02:00 [WARN] AI description too short or invalid (3 chars), using fallback
+2026-07-26 20:02:00 [INFO] Processing image [style: dracin]: https://i.mydramalist.com/xw3xX_4f.jpg
+2026-07-26 20:02:01 [INFO] Image saved to REDACTED\output\post_1785070920945_2.jpg
+2026-07-26 20:02:01 [INFO] Posting to Facebook page REDACTED
+2026-07-26 20:02:03 [INFO] Photo uploaded, ID: 122218395212558096
+2026-07-26 20:02:09 [INFO] Posted to feed! Post ID: REDACTED_122218395248558096
+2026-07-26 20:02:10 [INFO] Completed [3/3] in 43123ms
+2026-07-26 20:02:10 [INFO] === Run Complete ===
+2026-07-26 20:09:11 [INFO] === FB Dracin - Drama Poster ===
+2026-07-26 20:09:11 [INFO] Scraping MyDramaList from https://mydramalist.com/shows/popular
+2026-07-26 20:09:12 [INFO] Found 20 drama items
+2026-07-26 20:09:12 [INFO] Processing [1/1]: Guardian: The Lonely and Great God...
+2026-07-26 20:09:12 [INFO] Generating AI content for: "Guardian: The Lonely and Great God..."
+2026-07-26 20:09:22 [INFO] Raw AI response (992 chars): {
+  "description": "Guardian: The Lonely and Great God mengisahkan kisah seorang Goblin yang tak terkalahkan, yang telah hidup selama ratusan tahun menunggu seorang pengantin yang mampu mengucapkalimat yang akan mengakhirinya. Bersama dengan seorang pahlawan mati yang menjadi kudanya, ia berusaha menemukan makna hidup dan cinta di tengah dunia modern yang penuh dengan misteri dan keajaiban.\n\nDrama ini menggabungkan genre fantasi, romance, dan drama dengan cara yang sangat menyentuh. Kim Go-eun dan Gong Yoo memberikan kimia yang luar biasa, tandis tokoh pendukung seperti Lee Dong-wook dan Yoo In-na menambah kedayaan cerita dengan humor dan emosi yang kaya. Dengan 16 episode yang dirilis pada 2016, seri ini berhasil meraih rating 8,8/10 dan menempati posisi #179 pada MyDramaList.\n\nSudah nonton drama ini? Tulis pendapatmu di kolom komentar!\nSumber: MyDramaList\nSupport me: https://s.shopee.co.id/1BL3GW2EaJ",
+  "hashtags": [
+    "#kdrama",
+    "#dracin",
+    "#dramakorea",
+   
+2026-07-26 20:09:22 [WARN] AI response was not valid JSON, using fallback
+2026-07-26 20:09:22 [INFO] Processing image [style: dracin]: https://i.mydramalist.com/JkD8Xf.jpg
+2026-07-26 20:09:23 [INFO] Image saved to REDACTED\output\post_1785071362987_0.jpg
+2026-07-26 20:09:23 [INFO] Posting to Facebook page REDACTED
+2026-07-26 20:09:33 [INFO] Photo uploaded, ID: 122218395926558096
+2026-07-26 20:09:40 [INFO] Posted to feed! Post ID: REDACTED_122218395956558096
+2026-07-26 20:09:40 [INFO] Completed [1/1] in 28869ms
+2026-07-26 20:09:40 [INFO] === Run Complete ===
+2026-07-26 20:22:28 [INFO] === FB Dracin - Drama Poster ===
+2026-07-26 20:22:28 [INFO] Scraping MyDramaList from https://mydramalist.com/shows/popular
+2026-07-26 20:22:29 [INFO] Found 20 drama items
+2026-07-26 20:22:29 [INFO] Processing [1/1]: Guardian: The Lonely and Great God...
+2026-07-26 20:22:29 [INFO] Skipping (already posted): Guardian: The Lonely and Great God
+2026-07-26 20:22:29 [INFO] === Run Complete ===
+2026-07-26 20:22:43 [INFO] === FB Dracin - Drama Poster ===
+2026-07-26 20:22:43 [INFO] Scraping MyDramaList from https://mydramalist.com/shows/popular
+2026-07-26 20:22:43 [INFO] Found 20 drama items
+2026-07-26 20:22:43 [INFO] Processing [1/1]: Guardian: The Lonely and Great God...
+2026-07-26 20:22:43 [INFO] Generating AI content for: "Guardian: The Lonely and Great God..."
+2026-07-26 20:22:48 [INFO] Raw AI response (506 chars): {
+  "description": "Sebuah dewa abadi yang menunggu pelipur laras manusia akhirnya bertemu dengan seorang pemuda yang mampu melihatnya, bersama mereka menelusuri misteri masa lalu, cinta yang melampaui waktu, dan pengorbanan yang menentukan takdir dunia. Korean Drama - 2016, 16 episodes | Rating: 8.8/10 | Peringkat: #179",
+  "hashtags": [
+    "#kdrama",
+    "#dracin",
+    "#dramakorea",
+    "#goblin",
+    "#guardian",
+    "#fantasy",
+    "#romance",
+    "#drama",
+    "#netflix",
+    "#watchlist"
+  ]
+}
+2026-07-26 20:22:48 [INFO] AI content generated successfully (302 chars, 10 tags)
+2026-07-26 20:22:48 [INFO] Processing image [style: dracin]: https://i.mydramalist.com/JkD8Xf.jpg
+2026-07-26 20:22:49 [INFO] Image saved to REDACTED\output\post_1785072168536_0.jpg
+2026-07-26 20:22:49 [INFO] Posting to Facebook page REDACTED
+2026-07-26 20:22:51 [INFO] Photo uploaded, ID: 122218397012558096
+2026-07-26 20:23:00 [INFO] Posted to feed! Post ID: REDACTED_122218397060558096
+2026-07-26 20:23:00 [INFO] Completed [1/1] in 16652ms
+2026-07-26 20:23:00 [INFO] === Run Complete ===
+2026-07-26 20:28:02 [INFO] === FB Dracin - Drama Poster ===
+2026-07-26 20:28:02 [INFO] Scraping MyDramaList from https://mydramalist.com/shows/popular
+2026-07-26 20:28:03 [INFO] Found 20 drama items
+2026-07-26 20:28:03 [INFO] Processing [1/1]: Guardian: The Lonely and Great God...
+2026-07-26 20:28:03 [INFO] Generating AI content for: "Guardian: The Lonely and Great God..."
+2026-07-26 20:28:09 [INFO] Raw AI response (496 chars): {
+  "description": "Kim Shin, seorang pahlawan abadi yang dikutuk menjadi goblin, menunggu pengemis yang dapat mengucab kutuknya. Ketika ia bertemu dengan Ji Eun-tak, seorang siswi sekolah tinggi yang dapat melihat roh, takdir mereka terjalin dalam kisah cinta, pertemanan, dan pengorbanan yang melintasi waktu.",
+  "hashtags": [
+    "#kdrama",
+    "#dracin",
+    "#dramakorea",
+    "#goblin",
+    "#guardian",
+    "#kimshin",
+    "#jieuntak",
+    "#fantasy",
+    "#romance",
+    "#netflix"
+  ]
+}
+2026-07-26 20:28:09 [INFO] AI content generated successfully (291 chars, 10 tags)
+2026-07-26 20:28:09 [INFO] Processing image [style: dracin]: https://i.mydramalist.com/JkD8Xf.jpg
+2026-07-26 20:28:10 [INFO] Image saved to REDACTED\output\post_1785072489987_0.jpg
+2026-07-26 20:28:10 [INFO] Posting to Facebook page REDACTED
+2026-07-26 20:28:13 [INFO] Photo uploaded, ID: 122218397450558096
+2026-07-26 20:28:25 [INFO] Posted to feed! Post ID: REDACTED_122218397486558096
+2026-07-26 20:28:25 [INFO] Completed [1/1] in 21923ms
+2026-07-26 20:28:25 [INFO] === Run Complete ===
+2026-07-26 20:32:19 [INFO] === FB Dracin - Drama Poster ===
+2026-07-26 20:32:19 [INFO] Scraping MyDramaList from https://mydramalist.com/shows/popular
+2026-07-26 20:32:20 [INFO] Found 20 drama items
+2026-07-26 20:32:20 [INFO] Processing [1/1]: Guardian: The Lonely and Great God...
+2026-07-26 20:32:20 [INFO] Generating AI content for: "Guardian: The Lonely and Great God..."
+2026-07-26 20:32:25 [INFO] Raw AI response (546 chars): {
+  "description": "Kim Shin, seorang pahlawan abadi yang dikutuk menjadi Goblin, menunggu seorang pengemis yang bisa melepaskan kutuknya. Ketika ia bertemu dengan Ji Eun Tak, seorang siswa sekolah menengah yang mampu melihat roh, kehidupan mereka berubah secara tak terduga, mengajak mereka pada perjalanan cinta, pengorbanan, dan pencarian makna kehidupan abadi.",
+  "hashtags": [
+    "#kdrama",
+    "#dracin",
+    "#dramakorea",
+    "#goblin",
+    "#guardian",
+    "#fantasy",
+    "#romance",
+    "#drama",
+    "#korea",
+    "#lovestory"
+  ]
+}
+2026-07-26 20:32:25 [INFO] AI content generated successfully (344 chars, 10 tags)
+2026-07-26 20:32:25 [INFO] Processing image [style: dracin]: https://i.mydramalist.com/JkD8Xf.jpg
+2026-07-26 20:32:26 [INFO] Image saved to REDACTED\output\post_1785072745551_0.jpg
+2026-07-26 20:32:26 [INFO] Posting to Facebook page REDACTED
+2026-07-26 20:32:28 [INFO] Photo uploaded, ID: 122218398038558096
+2026-07-26 20:32:34 [INFO] Posted to feed! Post ID: REDACTED_122218398074558096
+2026-07-26 20:32:34 [INFO] Completed [1/1] in 14282ms
+2026-07-26 20:32:34 [INFO] === Run Complete ===
+2026-07-26 20:32:50 [INFO] === FB Dracin - Drama Poster ===
+2026-07-26 20:32:50 [INFO] Scraping MyDramaList from https://mydramalist.com/shows/popular
+2026-07-26 20:32:50 [INFO] Found 20 drama items
+2026-07-26 20:32:50 [INFO] Processing [1/1]: Guardian: The Lonely and Great God...
+2026-07-26 20:32:50 [INFO] Skipping (already posted): Guardian: The Lonely and Great God
+2026-07-26 20:32:50 [INFO] === Run Complete ===
+2026-07-26 20:44:23 [INFO] Scraping newest from https://mydramalist.com/shows/newest
+2026-07-26 20:44:24 [INFO] Scraped 20 from newest
+2026-07-26 20:44:24 [INFO] Scraping popular from https://mydramalist.com/shows/popular
+2026-07-26 20:44:24 [INFO] Scraped 20 from popular
+2026-07-26 20:44:24 [INFO] Total 40 unique drama items
+2026-07-26 20:44:37 [INFO] === FB Dracin - Drama Poster ===
+2026-07-26 20:44:37 [INFO] Scraping newest from https://mydramalist.com/shows/newest
+2026-07-26 20:44:38 [INFO] Scraped 20 from newest
+2026-07-26 20:44:38 [INFO] Scraping popular from https://mydramalist.com/shows/popular
+2026-07-26 20:44:38 [INFO] Scraped 20 from popular
+2026-07-26 20:44:38 [INFO] Total 40 unique drama items
+2026-07-26 20:44:38 [INFO] Processing [1/1]: The Vacation Principle...
+2026-07-26 20:44:38 [INFO] Generating AI content for: "The Vacation Principle..."
+2026-07-26 20:44:46 [INFO] Raw AI response (569 chars): {"description":"A burnt‑out office worker decides to follow a strict vacation principle—taking exactly one day off each month to reset his life—but when a mysterious colleague invites him to join an unconventional travel club, his planned breaks spiral into unexpected adventures that force him to confront his past, redefine happiness, and discover that true freedom lies not in the schedule but in the moments between.","hashtags":["#jdrama","#japanesedrama","#thevacationprinciple","#drama","#tvseries","#watchnow","#streaming","#mustwatch","#entertainment","#fyp"]}
+2026-07-26 20:44:46 [INFO] AI content generated successfully (404 chars, 10 tags)
+2026-07-26 20:44:46 [INFO] Processing image [style: dracin]: https://i.mydramalist.com/JB0blY_4f.jpg
+2026-07-26 20:44:47 [INFO] Image saved to REDACTED\output\post_1785073486029_0.jpg
+2026-07-26 20:44:47 [INFO] Posting to Facebook page REDACTED
+2026-07-26 20:44:55 [INFO] Photo uploaded, ID: 122218398968558096
+2026-07-26 20:45:03 [INFO] Posted to feed! Post ID: REDACTED_122218399004558096
+2026-07-26 20:45:03 [INFO] Completed [1/1] in 24418ms
+2026-07-26 20:45:03 [INFO] === Run Complete ===
+2026-07-26 20:49:30 [INFO] === FB Dracin - Drama Poster ===
+2026-07-26 20:49:30 [INFO] Scraping newest from https://mydramalist.com/shows/newest
+2026-07-26 20:49:30 [INFO] Scraped 20 from newest
+2026-07-26 20:49:30 [INFO] Scraping popular from https://mydramalist.com/shows/popular
+2026-07-26 20:49:31 [INFO] Scraped 20 from popular
+2026-07-26 20:49:31 [INFO] Total 40 unique drama items
+2026-07-26 20:49:31 [INFO] Processing [1/1]: The Vacation Principle...
+2026-07-26 20:49:31 [INFO] Generating AI content for: "The Vacation Principle..."
+2026-07-26 20:49:41 [INFO] Raw AI response (2835 chars): We need to output JSON only, with description (sinopsis 1 paragraph in Indonesian) and hashtags (10 hashtags, all lowercase). Must be Japanese drama, but hashtags should include #kdrama #dracin #dramakorea or #dramachina sesuai negara. Since it's Japanese drama, we should include maybe #jdrama? The instruction: hashtags relevan (termasuk #kdrama #dracin #dramakorea atau #dramachina sesuai negara). Means if country is Korean, include #kdrama #dracin #dramakorea; if Chinese, include #dramachina. For Japanese, maybe include #jdrama? Not explicitly required but we can include relevant tags like #jdrama #japandrama. Must be 10 hashtags, all lowercase. Must not include uppercase. Also ensure no extra text outside JSON. Provide only JSON.
+
+Let's craft sinopsis: Japanese drama 2026, 18 episodes, title "The Vacation Principle". Need to create a plausible synopsis in Indonesian, one paragraph, no emojis, no English. Avoid repeating title. Provide description.
+
+Hashtags: need 10, all lowercase. Include maybe #jdrama, #japandrama, #drama2026, #vacationprinciple (but lowercase, no spaces? hashtags cannot have spaces, can combine words). Also include generic drama tags: #drama, #seri, #nonton, #rekomendasi, #hiburan, #jadwalTV. Ensure 10.
+
+Make sure all hashtags start with # and are lowercase. No English words? The instruction didn't forbid English inside hashtags, but safer to use Indonesian or maybe English words are okay but they'd be lowercase. However "vacationprinciple" is English but lowercase; might be okay. But maybe better to use Indonesian translation: "prinsipcuti". Could use #prinsipcuti. But hashtag should be relevant. Let's include: #jdrama, #japandrama, #drama2026, #prinsipcuti, #drama, #seri, #nonton, #rekomendasi, #hiburan, #jadwalTV. That's 10.
+
+Check each: all lowercase, no spaces. #jadwalTV has capital T V? Actually "TV" uppercase. Need lowercase: #jadwaltv. So change to #jadwaltv.
+
+Now list: #jdrama #japandrama #drama2026 #prinsipcuti #drama #seri #nonton #rekomendasi #hiburan #jadwaltv
+
+Count: 1 jdrama,2 japandrama,3 drama2026,4 prinsipcuti,5 drama,6 seri,7 nonton,8 rekomendasi,9 hiburan,10 jadwaltv. Good.
+
+Now JSON: {"description":"...", "hashtags":[...]}
+
+Make sure description is one paragraph, Indonesian, no English words? Avoid English words in description. Use Indonesian only. Avoid repeating title. Let's craft: "Seorang pekerja kantor yang lelah dengan rutinitas harian memutuskan untuk mengikuti filosofi liburan yang tidak biasa, di mana setiap cuti harus dijalankan sesuai dengan aturan ketat yang dirancang sendiri. Saat ia mencoba menyeimbangkan tugas profesional dengan kebutuhan pribadi untuk istirahat, ia bertemu dengan seorang pengacara wisata yang mengajaknya melihat dunia dari perspektif yang lebih bebas. Pertemuan tersebut memicu perjalanan penemuan diri, mengung
+2026-07-26 20:49:41 [WARN] AI description too short or invalid (3 chars), using fallback
+2026-07-26 20:49:41 [INFO] Processing image [style: dracin]: https://i.mydramalist.com/JB0blY_4f.jpg
+2026-07-26 20:49:42 [INFO] Image saved to REDACTED\output\post_1785073781033_0.jpg
+2026-07-26 20:49:42 [INFO] Posting to Facebook page REDACTED
+2026-07-26 20:49:44 [INFO] Photo uploaded, ID: 122218399430558096
+2026-07-26 20:49:48 [INFO] Posted to feed! Post ID: REDACTED_122218399466558096
+2026-07-26 20:49:48 [INFO] Completed [1/1] in 17210ms
+2026-07-26 20:49:48 [INFO] === Run Complete ===
+2026-07-26 20:57:29 [INFO] === FB Dracin - Drama Poster ===
+2026-07-26 20:57:29 [INFO] Scraping newest from https://mydramalist.com/shows/newest
+2026-07-26 20:57:29 [INFO] Scraped 20 from newest
+2026-07-26 20:57:29 [INFO] Scraping popular from https://mydramalist.com/shows/popular
+2026-07-26 20:57:30 [INFO] Scraped 20 from popular
+2026-07-26 20:57:30 [INFO] Total 40 unique drama items
+2026-07-26 20:57:30 [INFO] Processing [1/1]: The Vacation Principle...
+2026-07-26 20:57:30 [INFO] Generating AI content for: "The Vacation Principle..."
+2026-07-26 20:57:30 [WARN] AI generation failed: Request failed with status code 404, using fallback
+2026-07-26 20:57:30 [INFO] Processing image [style: dracin]: https://i.mydramalist.com/JB0blY_4f.jpg
+2026-07-26 20:57:31 [INFO] Image saved to REDACTED\output\post_1785074250720_0.jpg
+2026-07-26 20:57:31 [INFO] Posting to Facebook page REDACTED
+2026-07-26 20:57:35 [INFO] Photo uploaded, ID: 122218400240558096
+2026-07-26 20:57:39 [INFO] Posted to feed! Post ID: REDACTED_122218400276558096
+2026-07-26 20:57:39 [INFO] Completed [1/1] in 9022ms
+2026-07-26 20:57:39 [INFO] === Run Complete ===
+2026-07-26 21:01:24 [INFO] === FB Dracin - Drama Poster ===
+2026-07-26 21:01:24 [INFO] Scraping newest from https://mydramalist.com/shows/newest
+2026-07-26 21:01:25 [INFO] Scraped 20 from newest
+2026-07-26 21:01:25 [INFO] Scraping popular from https://mydramalist.com/shows/popular
+2026-07-26 21:01:25 [INFO] Scraped 20 from popular
+2026-07-26 21:01:25 [INFO] Total 40 unique drama items
+2026-07-26 21:01:25 [INFO] Processing [1/1]: The Vacation Principle...
+2026-07-26 21:01:25 [INFO] [Gemini] Generating for: "The Vacation Principle..."
+2026-07-26 21:01:25 [WARN] [Gemini] failed: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent: [429 Too Many Requests] You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. 
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_input_token_count, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 0, model: gemini-2.0-flash
+Please retry in 34.669112089s. [{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Learn more about Gemini API quotas","url":"https://ai.google.dev/gemini-api/docs/rate-limits"}]},{"@type":"type.googleapis.com/google.rpc.QuotaFailure","violations":[{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_input_token_count","quotaId":"GenerateContentInputTokensPerModelPerMinute-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerMinutePerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}},{"quotaMetric":"generativelanguage.googleapis.com/generate_content_free_tier_requests","quotaId":"GenerateRequestsPerDayPerProjectPerModel-FreeTier","quotaDimensions":{"location":"global","model":"gemini-2.0-flash"}}]},{"@type":"type.googleapis.com/google.rpc.RetryInfo","retryDelay":"34s"}], using fallback
+2026-07-26 21:01:25 [INFO] Processing image [style: dracin]: https://i.mydramalist.com/JB0blY_4f.jpg
+2026-07-26 21:01:26 [INFO] Image saved to REDACTED\output\post_1785074485694_0.jpg
+2026-07-26 21:01:26 [INFO] Posting to Facebook page REDACTED
+2026-07-26 21:01:31 [INFO] Photo uploaded, ID: 122218400756558096
+2026-07-26 21:01:39 [INFO] Posted to feed! Post ID: REDACTED_122218400798558096
+2026-07-26 21:01:39 [INFO] Completed [1/1] in 14482ms
+2026-07-26 21:01:39 [INFO] === Run Complete ===
+2026-07-26 21:16:08 [INFO] === FB Dracin - Drama Poster ===
+2026-07-26 21:16:08 [INFO] Scraping newest from https://mydramalist.com/shows/newest
+2026-07-26 21:16:09 [INFO] Scraped 20 from newest
+2026-07-26 21:16:09 [INFO] Scraping popular from https://mydramalist.com/shows/popular
+2026-07-26 21:16:09 [INFO] Scraped 20 from popular
+2026-07-26 21:16:09 [INFO] Total 40 unique drama items
+2026-07-26 21:16:09 [INFO] Processing [1/1]: The Vacation Principle...
+2026-07-26 21:16:09 [INFO] Trying AI model: nvidia/nemotron-3-ultra-550b-a55b:free
+2026-07-26 21:16:14 [INFO] [nvidia/nemotron-3-ultra-550b-a55b:free] Raw response (455 chars): {"description": "Seorang karyawan kantor yang selalu menumpuk cuti tahunannya tiba-tiba dipaksa mengambil liburan panjang oleh atasan barunya yang eksentrik, memulai perjalanan menemukan kembali makna istirahat, cinta, dan keputusasaan tersembunyi di balik rutinitas yang membosankan.", "hashtags": ["#jdram", "#jdrama", "#dorama", "#japandrama", "#kyukakisoku", "#thevacationprinciple", "#dramajepang", "#officeromance", "#healingdrama", "#sliceoflife"]}
+2026-07-26 21:16:14 [INFO] [nvidia/nemotron-3-ultra-550b-a55b:free] Success (267 chars, 10 tags)
+2026-07-26 21:16:14 [INFO] Processing image [style: dracin]: https://i.mydramalist.com/JB0blY_4f.jpg
+2026-07-26 21:16:15 [INFO] Image saved to REDACTED\output\post_1785075374355_0.jpg
+2026-07-26 21:16:15 [INFO] Posting to Facebook page REDACTED
+2026-07-26 21:16:17 [INFO] Photo uploaded, ID: 122218401656558096
+2026-07-26 21:16:23 [INFO] Posted to feed! Post ID: REDACTED_122218401692558096
+2026-07-26 21:16:23 [INFO] Completed [1/1] in 13766ms
+2026-07-26 21:16:23 [INFO] === Run Complete ===

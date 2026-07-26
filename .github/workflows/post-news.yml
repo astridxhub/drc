@@ -1,0 +1,43 @@
+name: Post Drama to Facebook
+
+on:
+  schedule:
+    # Jadwal MovieFeed: 09, 10, 13, 15, 19, 21 WIB
+    #  09:00 WIB → 02:00 UTC
+    #  10:00 WIB → 03:00 UTC
+    #  13:00 WIB → 06:00 UTC
+    #  15:00 WIB → 08:00 UTC
+    #  19:00 WIB → 12:00 UTC
+    #  21:00 WIB → 14:00 UTC
+    - cron: '0 2,3,6,8,12,14 * * *'
+  workflow_dispatch:
+
+jobs:
+  post-drama:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - run: npm ci
+
+      - run: npm run build
+
+      - name: Create .env
+        run: |
+          echo "OPENROUTER_API_KEY=${{ secrets.OPENROUTER_API_KEY }}" >> .env
+          echo "AI_MODEL=${{ secrets.AI_MODEL }}" >> .env
+          echo "FACEBOOK_PAGE_ID=${{ secrets.FACEBOOK_PAGE_ID }}" >> .env
+          echo "FACEBOOK_ACCESS_TOKEN=${{ secrets.FACEBOOK_ACCESS_TOKEN }}" >> .env
+          echo "POST_INTERVAL_HOURS=4" >> .env
+          echo "MAX_POSTS_PER_RUN=3" >> .env
+          echo "NEWS_SOURCE_URL=${{ secrets.NEWS_SOURCE_URL }}" >> .env
+          echo "IMAGE_WIDTH=800" >> .env
+          echo "IMAGE_HEIGHT=1200" >> .env
+          echo "IMAGE_STYLE=${{ secrets.IMAGE_STYLE }}" >> .env
+
+      - run: npm start
