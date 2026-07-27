@@ -3,7 +3,9 @@ import { AiResponse } from './types'
 import { logger } from './utils/logger'
 
 interface AiGenOptions {
-  apiKey: string
+  groqApiKey: string
+  groqBaseUrl: string
+  openrouterApiKey: string
   model: string
   articleTitle: string
   articleLink: string
@@ -15,7 +17,7 @@ interface AiGenOptions {
 }
 
 export async function generateContent(opts: AiGenOptions): Promise<AiResponse> {
-  const { apiKey, articleTitle, articleLink, articleCategory, sourceName, rating, ranking, metadata } = opts
+  const { groqApiKey, groqBaseUrl, openrouterApiKey, articleTitle, articleLink, articleCategory, sourceName, rating, ranking, metadata } = opts
 
   const models = opts.model.split(',').map(m => m.trim()).filter(Boolean)
 
@@ -46,12 +48,31 @@ Link: ${articleLink}
 RESPON HANYA DENGAN JSON:`
 
   for (const model of models) {
+    const isGroq = model.startsWith('groq/')
+    const actualModel = isGroq ? model.slice(5) : model
+    const apiKey = isGroq ? groqApiKey : openrouterApiKey
+    const baseUrl = isGroq ? groqBaseUrl : 'https://openrouter.ai/api/v1'
+
+    if (!apiKey) {
+      logger.warn(`[${model}] No API key configured, skipping`)
+      continue
+    }
+
     logger.info(`Trying AI model: ${model}`)
     try {
+      const headers: Record<string, string> = {
+        'Authorization': `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+      }
+      if (!isGroq) {
+        headers['HTTP-Referer'] = 'https://github.com/fb-dracin'
+        headers['X-Title'] = 'FB Dracin'
+      }
+
       const { data } = await axios.post(
-        'https://openrouter.ai/api/v1/chat/completions',
+        `${baseUrl}/chat/completions`,
         {
-          model,
+          model: actualModel,
           messages: [
             { role: 'system', content: systemPrompt },
             { role: 'user', content: userPrompt },
@@ -59,15 +80,7 @@ RESPON HANYA DENGAN JSON:`
           temperature: 0.7,
           max_tokens: 800,
         },
-        {
-          headers: {
-            'Authorization': `Bearer ${apiKey}`,
-            'Content-Type': 'application/json',
-            'HTTP-Referer': 'https://github.com/fb-dracin',
-            'X-Title': 'FB Dracin',
-          },
-          timeout: 30000,
-        }
+        { headers, timeout: 30000 }
       )
 
       const rawContent = data.choices?.[0]?.message?.content || ''
@@ -113,18 +126,31 @@ RESPON HANYA DENGAN JSON:`
 function tryParseJson(content: string): any | null {
   let cleaned = content.replace(/```json\s*/gi, '').replace(/```\s*/g, '').trim()
 
+  cleaned = cleaned
+    .replace(/,(\s*[}\]])/g, '$1')
+    .replace(/\\(?!["\\/bfnrtu])/g, '\\\\')
+
   try {
     return JSON.parse(cleaned)
   } catch { }
 
   const match = cleaned.match(/\{[\s\S]*\}/)
   if (match) {
+    let json = match[0]
+      .replace(/,(\s*[}\]])/g, '$1')
     try {
-      return JSON.parse(match[0])
+      return JSON.parse(json)
+    } catch { }
+    json = json
+      .replace(/:\s*'([^']+)'/g, ':"$1"')
+      .replace(/,\s*}/g, '}')
+      .replace(/,\s*\]/g, ']')
+    try {
+      return JSON.parse(json)
     } catch { }
   }
 
-  const descMatch = cleaned.match(/"description"\s*:\s*"([^"]+)"/)
+  const descMatch = cleaned.match(/"description"\s*:\s*"([^"]*)"/)
   const hashMatch = cleaned.match(/"hashtags"\s*:\s*\[(.*?)\]/s)
 
   if (descMatch && hashMatch) {
@@ -141,7 +167,7 @@ function generateFallback(_title: string, category: string, _sourceName: string,
   const country = category.toLowerCase()
   const countryTag = country === 'korean' ? '#kdrama' : country === 'chinese' ? '#dramachina' : '#drama'
 
-  const description = `Drama ${category} ini mengisahkan kisah yang penuh emosi, konflik, dan perjalanan karakter yang mendalam. Dengan alur cerita yang menarik dan produksi berkualitas, drama ini berhasil memikat hati penonton di seluruh dunia.`
+  const description = _title
 
   const words = _title.toLowerCase().replace(/[^a-z0-9 ]/g, '').split(/\s+/).filter(w => w.length > 2)
   const uniqueWords = [...new Set(words)].slice(0, 3)

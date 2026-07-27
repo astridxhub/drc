@@ -6,7 +6,6 @@ dotenv.config()
 
 export function loadConfig(): Config {
   const required = [
-    'OPENROUTER_API_KEY',
     'FACEBOOK_PAGE_ID',
     'FACEBOOK_ACCESS_TOKEN',
   ] as const
@@ -17,8 +16,10 @@ export function loadConfig(): Config {
   }
 
   return {
-    openrouterApiKey: process.env.OPENROUTER_API_KEY!,
-    aiModel: process.env.AI_MODEL || 'nvidia/nemotron-3-super-120b-a12b:free',
+    openrouterApiKey: process.env.OPENROUTER_API_KEY || '',
+    groqApiKey: process.env.GROQ_API_KEY || '',
+    groqBaseUrl: process.env.GROQ_BASE_URL || 'https://api.groq.com/openai/v1',
+    aiModel: process.env.AI_MODEL || 'groq/llama-3.3-70b-versatile,groq/llama-4-scout-17b-16e-instruct,groq/qwen-2.5-32b',
     facebookPageId: process.env.FACEBOOK_PAGE_ID!,
     facebookAccessToken: process.env.FACEBOOK_ACCESS_TOKEN!,
     postIntervalHours: parseInt(process.env.POST_INTERVAL_HOURS || '6', 10),

@@ -63,7 +63,9 @@ async function main(): Promise<void> {
         const sourceName = 'MyDramaList'
 
         const aiResponse = await generateContent({
-          apiKey: config.openrouterApiKey,
+          groqApiKey: config.groqApiKey,
+          groqBaseUrl: config.groqBaseUrl,
+          openrouterApiKey: config.openrouterApiKey,
           model: config.aiModel,
           articleTitle: article.title,
           articleLink: article.link,

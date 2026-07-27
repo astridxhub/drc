@@ -22,6 +22,8 @@ export interface AiResponse {
 
 export interface Config {
   openrouterApiKey: string
+  groqApiKey: string
+  groqBaseUrl: string
   aiModel: string
   facebookPageId: string
   facebookAccessToken: string
