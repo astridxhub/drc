@@ -29,7 +29,7 @@ export interface Config {
   facebookAccessToken: string
   postIntervalHours: number
   maxPostsPerRun: number
-  newsSourceUrl: string
+  newsSourceUrls: string[]
   logoPath: string
   imageWidth: number
   imageHeight: number

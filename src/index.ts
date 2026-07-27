@@ -40,7 +40,7 @@ async function main(): Promise<void> {
     }
 
     // Scrape articles
-    const articles = await scrapeArticles()
+    const articles = await scrapeArticles(config.newsSourceUrls)
     const toProcess = articles.slice(0, config.maxPostsPerRun)
 
     // Ensure output dir

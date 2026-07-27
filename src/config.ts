@@ -24,7 +24,7 @@ export function loadConfig(): Config {
     facebookAccessToken: process.env.FACEBOOK_ACCESS_TOKEN!,
     postIntervalHours: parseInt(process.env.POST_INTERVAL_HOURS || '6', 10),
     maxPostsPerRun: parseInt(process.env.MAX_POSTS_PER_RUN || '3', 10),
-    newsSourceUrl: process.env.NEWS_SOURCE_URL || 'https://mydramalist.com/shows/newest',
+    newsSourceUrls: (process.env.NEWS_SOURCE_URLS || 'https://mydramalist.com/shows/popular,https://mydramalist.com/shows/upcoming').split(',').map(s => s.trim()).filter(Boolean),
     logoPath: process.env.LOGO_PATH || path.join(process.cwd(), 'assets', 'logo.png'),
     imageWidth: parseInt(process.env.IMAGE_WIDTH || '800', 10),
     imageHeight: parseInt(process.env.IMAGE_HEIGHT || '1200', 10),

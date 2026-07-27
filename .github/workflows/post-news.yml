@@ -43,8 +43,8 @@ jobs:
           echo "FACEBOOK_PAGE_ID=${{ secrets.FACEBOOK_PAGE_ID }}" >> .env
           echo "FACEBOOK_ACCESS_TOKEN=${{ secrets.FACEBOOK_ACCESS_TOKEN }}" >> .env
           echo "POST_INTERVAL_HOURS=4" >> .env
-          echo "MAX_POSTS_PER_RUN=3" >> .env
-          echo "NEWS_SOURCE_URL=${{ secrets.NEWS_SOURCE_URL }}" >> .env
+          echo "MAX_POSTS_PER_RUN=40" >> .env
+          echo "NEWS_SOURCE_URLS=${{ secrets.NEWS_SOURCE_URLS }}" >> .env
           echo "IMAGE_WIDTH=800" >> .env
           echo "IMAGE_HEIGHT=1200" >> .env
           echo "IMAGE_STYLE=${{ secrets.IMAGE_STYLE }}" >> .env
