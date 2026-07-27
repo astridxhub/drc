@@ -45,7 +45,7 @@ jobs:
           FACEBOOK_ACCESS_TOKEN=${{ secrets.FACEBOOK_ACCESS_TOKEN }}
           POST_INTERVAL_HOURS=0
           MAX_POSTS_PER_RUN=4
-          NEWS_SOURCE_URLS=https://wetv.vip/id/channel/10054?id=10054&type=PAGE_TYPE_MODULE_LIST
+          NEWS_SOURCE_URLS=https://wetv.vip/id/channel/10054?id=10054
           IMAGE_WIDTH=800
           IMAGE_HEIGHT=1200
           IMAGE_STYLE=${{ secrets.IMAGE_STYLE }}
