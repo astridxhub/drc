@@ -23,6 +23,15 @@ jobs:
           node-version: 20
           cache: 'npm'
 
+      - name: Restore dedup cache
+        id: cache-dedup
+        uses: actions/cache@v4
+        with:
+          path: data/posted.json
+          key: dedup-${{ github.run_id }}
+          restore-keys: |
+            dedup-
+
       - run: npm ci
 
       - run: npm run build
