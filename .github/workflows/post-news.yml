@@ -29,8 +29,6 @@ jobs:
         with:
           path: data/posted.json
           key: dedup-${{ github.run_id }}
-          restore-keys: |
-            dedup-
 
       - run: npm ci
 
