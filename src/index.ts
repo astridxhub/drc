@@ -12,6 +12,13 @@ import { isAlreadyPosted, markAsPosted } from './dedup'
 
 const AFF_LINKS_FILE = path.join(process.cwd(), 'assets', 'linkaff.txt')
 
+function getSourceName(link: string): string {
+  if (link.includes('mydramalist.com')) return 'MyDramaList'
+  if (link.includes('iq.com')) return 'iQ.com'
+  if (link.includes('wetv.vip')) return 'WeTV.vip'
+  return 'MyDramaList'
+}
+
 function randomAffLink(): string {
   try {
     const links = fs.readFileSync(AFF_LINKS_FILE, 'utf-8').split(/\r?\n/).map(l => l.trim()).filter(Boolean)
@@ -60,7 +67,7 @@ async function main(): Promise<void> {
           continue
         }
 
-        const sourceName = 'MyDramaList'
+        const sourceName = getSourceName(article.link)
 
         const aiResponse = await generateContent({
           groqApiKey: config.groqApiKey,
@@ -86,7 +93,7 @@ ${infoParts.join(' | ')}
 
 ${synopsis}
 
-Sumber: MyDramaList
+Sumber: ${sourceName}
 Support me: ${randomAffLink()}`
 
         // Process image

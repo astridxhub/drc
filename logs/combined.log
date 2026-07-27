@@ -671,3 +671,19 @@ Please retry in 34.669112089s. [{"@type":"type.googleapis.com/google.rpc.Help","
 2026-07-26 21:16:23 [INFO] Posted to feed! Post ID: REDACTED_122218401692558096
 2026-07-26 21:16:23 [INFO] Completed [1/1] in 13766ms
 2026-07-26 21:16:23 [INFO] === Run Complete ===
+2026-07-28 02:18:16 [INFO] === FB Dracin - Drama Poster ===
+2026-07-28 02:18:17 [INFO] Scraped 2 from source-1: https://www.iq.com/newOnline?lang=id_id
+2026-07-28 02:18:17 [INFO] Total 2 unique drama items
+2026-07-28 02:18:17 [INFO] Processing [1/1]: 烈焰狂沙...
+2026-07-28 02:18:17 [INFO] Trying AI model: groq/llama-3.3-70b-versatile
+2026-07-28 02:18:18 [INFO] [groq/llama-3.3-70b-versatile] Raw response (524 chars): {"description": "Dalam dunia yang dipenuhi kekerasan dan ketidakadilan, seorang pria bernama Wei Xiaofeng harus menghadapi tantangan hidup yang berat setelah ayahnya dibunuh, kemudian ia bergabung dengan geng kriminal untuk membalas dendam dan mencari keadilan, namun ia harus menghadapi konflik internal dan eksternal yang membuatnya harus memilih antara keadilan dan kekerasan", "hashtags": ["#dramachina", "#dramatv", "#kriminal", "#laga", "#china", "#dramaasia", "#serialtv", "#tvseries", "#filmchina", "#dramachinese"]}
+2026-07-28 02:18:18 [INFO] [groq/llama-3.3-70b-versatile] Success (361 chars, 10 tags)
+2026-07-28 02:18:18 [INFO] Processing image [style: dracin]: https://pic3.iqiyipic.com/image/20260724/6d/7f/v_207693567_m_601_zh-CN_m2_480_270.webp
+2026-07-28 02:18:28 [INFO] Font cached: Noto+Sans+SC-700
+2026-07-28 02:18:29 [INFO] Font cached: Noto+Sans+SC-400
+2026-07-28 02:18:29 [INFO] Image saved to REDACTED\output\post_1785179898290_0.jpg
+2026-07-28 02:18:29 [INFO] Posting to Facebook page REDACTED
+2026-07-28 02:18:32 [INFO] Photo uploaded, ID: 122218544390558096
+2026-07-28 02:18:38 [INFO] Posted to feed! Post ID: REDACTED_122218544426558096
+2026-07-28 02:18:38 [INFO] Completed [1/1] in 20673ms
+2026-07-28 02:18:38 [INFO] === Run Complete ===

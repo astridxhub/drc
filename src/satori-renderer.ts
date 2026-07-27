@@ -63,17 +63,26 @@ let _fonts: any[] | null = null
 
 async function ensureFonts() {
   if (_fonts) return _fonts
-  const poppins400 = await findFontUrl('Poppins', 400)
-  const poppins600 = await findFontUrl('Poppins', 600)
-  const poppins700 = await findFontUrl('Poppins', 700)
-  const poppins800 = await findFontUrl('Poppins', 800)
+  const [poppins400, poppins600, poppins700, poppins800, notoSans400, notoSans700] = await Promise.all([
+    findFontUrl('Poppins', 400),
+    findFontUrl('Poppins', 600),
+    findFontUrl('Poppins', 700),
+    findFontUrl('Poppins', 800),
+    findFontUrl('Noto+Sans+SC', 400).catch(() => null),
+    findFontUrl('Noto+Sans+SC', 700).catch(() => null),
+  ])
 
-  _fonts = (await Promise.all([
+  const fontTasks = [
     getFont('Poppins', 400 as any, poppins400),
     getFont('Poppins', 600 as any, poppins600),
     getFont('Poppins', 700 as any, poppins700),
     getFont('Poppins', 800 as any, poppins800),
-  ])) as any
+  ]
+
+  if (notoSans400) fontTasks.push(getFont('Noto+Sans+SC', 400 as any, notoSans400))
+  if (notoSans700) fontTasks.push(getFont('Noto+Sans+SC', 700 as any, notoSans700))
+
+  _fonts = (await Promise.all(fontTasks)) as any
   return _fonts
 }
 
