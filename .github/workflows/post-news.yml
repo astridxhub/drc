@@ -43,9 +43,9 @@ jobs:
           AI_MODEL=${{ secrets.AI_MODEL }}
           FACEBOOK_PAGE_ID=${{ secrets.FACEBOOK_PAGE_ID }}
           FACEBOOK_ACCESS_TOKEN=${{ secrets.FACEBOOK_ACCESS_TOKEN }}
-          POST_INTERVAL_HOURS=0
-          MAX_POSTS_PER_RUN=4
-          NEWS_SOURCE_URLS=https://mydramalist.com/shows/popular,https://mydramalist.com/shows/upcoming,https://www.iq.com/newOnline?lang=id_id
+          POST_INTERVAL_HOURS=4
+          MAX_POSTS_PER_RUN=40
+          NEWS_SOURCE_URLS=https://mydramalist.com/shows/popular,https://mydramalist.com/shows/upcoming,https://www.iq.com/newOnline?lang=id_id,https://wetv.vip/id/channel/10054?id=10054
           IMAGE_WIDTH=800
           IMAGE_HEIGHT=1200
           IMAGE_STYLE=${{ secrets.IMAGE_STYLE }}
