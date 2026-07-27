@@ -36,17 +36,19 @@ jobs:
 
       - name: Create .env
         run: |
-          echo "GROQ_API_KEY=${{ secrets.GROQ_API_KEY }}" >> .env
-          echo "GROQ_BASE_URL=${{ secrets.GROQ_BASE_URL }}" >> .env
-          echo "OPENROUTER_API_KEY=${{ secrets.OPENROUTER_API_KEY }}" >> .env
-          echo "AI_MODEL=${{ secrets.AI_MODEL }}" >> .env
-          echo "FACEBOOK_PAGE_ID=${{ secrets.FACEBOOK_PAGE_ID }}" >> .env
-          echo "FACEBOOK_ACCESS_TOKEN=${{ secrets.FACEBOOK_ACCESS_TOKEN }}" >> .env
-          echo "POST_INTERVAL_HOURS=0" >> .env
-          echo "MAX_POSTS_PER_RUN=4" >> .env
-          echo 'NEWS_SOURCE_URLS=${{ secrets.NEWS_SOURCE_URLS }}' >> .env
-          echo "IMAGE_WIDTH=800" >> .env
-          echo "IMAGE_HEIGHT=1200" >> .env
-          echo "IMAGE_STYLE=${{ secrets.IMAGE_STYLE }}" >> .env
+          cat >> .env << 'EOF'
+          GROQ_API_KEY=${{ secrets.GROQ_API_KEY }}
+          GROQ_BASE_URL=${{ secrets.GROQ_BASE_URL }}
+          OPENROUTER_API_KEY=${{ secrets.OPENROUTER_API_KEY }}
+          AI_MODEL=${{ secrets.AI_MODEL }}
+          FACEBOOK_PAGE_ID=${{ secrets.FACEBOOK_PAGE_ID }}
+          FACEBOOK_ACCESS_TOKEN=${{ secrets.FACEBOOK_ACCESS_TOKEN }}
+          POST_INTERVAL_HOURS=0
+          MAX_POSTS_PER_RUN=4
+          NEWS_SOURCE_URLS=https://wetv.vip/id/channel/10054?id=10054&type=PAGE_TYPE_MODULE_LIST
+          IMAGE_WIDTH=800
+          IMAGE_HEIGHT=1200
+          IMAGE_STYLE=${{ secrets.IMAGE_STYLE }}
+          EOF
 
       - run: npm start
