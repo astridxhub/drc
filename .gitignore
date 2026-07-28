@@ -1,6 +1,5 @@
 node_modules/
 dist/
-data/
 output/
 ai-raw.log
 .env
