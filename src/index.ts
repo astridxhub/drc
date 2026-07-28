@@ -16,6 +16,7 @@ function getSourceName(link: string): string {
   if (link.includes('mydramalist.com')) return 'MyDramaList'
   if (link.includes('iq.com')) return 'iQ.com'
   if (link.includes('wetv.vip')) return 'WeTV.vip'
+  if (link.includes('youku.tv')) return 'Youku.tv'
   return 'MyDramaList'
 }
 

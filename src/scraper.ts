@@ -193,6 +193,52 @@ async function scrapeWeTV(url: string): Promise<Article[]> {
   return capped
 }
 
+async function scrapeYouku(url: string): Promise<Article[]> {
+  const html = await fetchWithRetry(url)
+  const match = html.match(/window\.__INITIAL_DATA__\s*=\s*(\{[\s\S]*?\});\s*(?:window\.|var |<\/script>)/)
+  if (!match) throw new Error('__INITIAL_DATA__ not found in youku.tv')
+  let raw = match[1].replace(/\bundefined\b/g, 'null')
+  const data = JSON.parse(raw)
+
+  const all: Article[] = []
+  const seen = new Set<string>()
+
+  for (const mod of (data.moduleList || [])) {
+    const section = mod.mainTitleLinks?.[0]?.title || mod.type || ''
+    for (const comp of (mod.components || [])) {
+      for (const item of (comp.itemList || [])) {
+        const title = item.title || ''
+        if (!title || seen.has(title)) continue
+        seen.add(title)
+
+        const img = item.img || item.vImg || ''
+        const imageUrl = img ? (img.startsWith('//') ? `https:${img}` : img) : ''
+        if (!imageUrl) continue
+
+        const linkHref = item.link || item.videoLink || ''
+        const link = linkHref.startsWith('http') ? linkHref : linkHref.startsWith('//') ? `https:${linkHref}` : `https:${linkHref}`
+
+        const tags: string[] = item.desc || []
+
+        all.push({
+          title,
+          imageUrl,
+          link,
+          category: section,
+          rating: '',
+          ranking: '',
+          metadata: tags.join(', '),
+          date: '',
+        })
+      }
+    }
+  }
+
+  const capped = all.slice(0, 2)
+  logger.info(`Scraped ${capped.length} items from Youku (${all.length} total before cap)`)
+  return capped
+}
+
 export async function scrapeArticles(sourceUrls: string[]): Promise<Article[]> {
   const all = new Map<string, Article>()
 
@@ -206,6 +252,8 @@ export async function scrapeArticles(sourceUrls: string[]): Promise<Article[]> {
         items = await scrapeIQ(url)
       } else if (url.includes('wetv.vip')) {
         items = await scrapeWeTV(url)
+      } else if (url.includes('youku.tv')) {
+        items = await scrapeYouku(url)
       } else if (url.includes('mydramalist.com')) {
         items = await scrapeUrl(url, label)
       } else {
