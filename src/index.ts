@@ -8,14 +8,13 @@ import { postToFacebook } from './facebook-poster'
 import { loadHealth, saveHealth, recordSuccess, recordError, isHealthy, shouldSkipRun } from './health-check'
 import { logAnalytics } from './analytics'
 import { logger } from './utils/logger'
-import { isAlreadyPosted, markAsPosted } from './dedup'
+import { isAlreadyPosted, markAsPosted, countPostedBySource } from './dedup'
 
 const AFF_LINKS_FILE = path.join(process.cwd(), 'assets', 'linkaff.txt')
 
 function getSourceName(link: string): string {
   if (link.includes('mydramalist.com')) return 'MyDramaList'
   if (link.includes('iq.com')) return 'iQ.com'
-  if (link.includes('wetv.vip')) return 'WeTV.vip'
   if (link.includes('youku.tv')) return 'Youku.tv'
   return 'MyDramaList'
 }
@@ -49,7 +48,28 @@ async function main(): Promise<void> {
 
     // Scrape articles
     const articles = await scrapeArticles(config.newsSourceUrls)
-    const toProcess = articles.slice(0, config.maxPostsPerRun)
+
+    // Per-source allocation
+    const mlPosted = countPostedBySource('mydramalist.com')
+    const mlPool = articles.filter(a => getSourceName(a.link) === 'MyDramaList' && !isAlreadyPosted(a.link))
+    const iqPool = articles.filter(a => getSourceName(a.link) === 'iQ.com' && !isAlreadyPosted(a.link))
+    const ykPool = articles.filter(a => getSourceName(a.link) === 'Youku.tv' && !isAlreadyPosted(a.link))
+
+    // Phase 1: distribute 40 ML across runs (~7/run), Phase 2: all new ML
+    const mlQuota = mlPosted >= 40
+      ? mlPool.length
+      : Math.min(7, Math.max(0, 40 - mlPosted), mlPool.length)
+
+    const iqQuota = Math.min(2, iqPool.length)
+    const ykQuota = Math.min(2, ykPool.length)
+
+    const toProcess = [
+      ...mlPool.slice(0, mlQuota),
+      ...iqPool.slice(0, iqQuota),
+      ...ykPool.slice(0, ykQuota),
+    ]
+
+    logger.info(`ML posted so far: ${mlPosted}, quota: ${mlQuota}, iQ quota: ${iqQuota}, Youku quota: ${ykQuota}`)
 
     // Ensure output dir
     const outputDir = path.join(process.cwd(), 'output')
@@ -61,12 +81,6 @@ async function main(): Promise<void> {
 
       try {
         logger.info(`Processing [${i + 1}/${toProcess.length}]: ${article.title.substring(0, 60)}...`)
-
-        // Skip if already posted
-        if (isAlreadyPosted(article.link)) {
-          logger.info(`Skipping (already posted): ${article.title.substring(0, 50)}`)
-          continue
-        }
 
         const sourceName = getSourceName(article.link)
 

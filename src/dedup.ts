@@ -39,3 +39,12 @@ export function markAsPosted(articleLink: string): void {
   posted.add(articleLink)
   save(posted)
 }
+
+export function countPostedBySource(sourcePattern: string): number {
+  const posted = load()
+  let count = 0
+  for (const link of posted) {
+    if (link.includes(sourcePattern)) count++
+  }
+  return count
+}
