@@ -28,7 +28,9 @@ jobs:
         uses: actions/cache@v4
         with:
           path: data/posted.json
-          key: dedup-${{ github.run_id }}
+          key: dedup-v1
+          restore-keys: |
+            dedup-v1
 
       - run: npm ci
 
