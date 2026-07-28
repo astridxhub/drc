@@ -15,7 +15,7 @@ const AFF_LINKS_FILE = path.join(process.cwd(), 'assets', 'linkaff.txt')
 function getSourceName(link: string): string {
   if (link.includes('mydramalist.com')) return 'MyDramaList'
   if (link.includes('iq.com')) return 'iQ.com'
-  if (link.includes('youku.tv')) return 'Youku.tv'
+  if (link.includes('youku.tv') || link.includes('youku.com')) return 'Youku.tv'
   return 'MyDramaList'
 }
 
