@@ -3,4 +3,5 @@ dist/
 output/
 ai-raw.log
 logs/
+data/
 .env
