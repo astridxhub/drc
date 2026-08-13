@@ -19,40 +19,41 @@ export async function postToFacebook(opts: PostOptions): Promise<string> {
 
   logger.info(`Posting to Facebook page ${pageId}`)
 
-  // Step 1: Upload photo (unpublished)
+  // Cara 1 (paling andal): upload foto + caption sekaligus dalam satu panggilan.
+  // Menghindari publish terpisah (POST /{photoId}) yang ditolak error #3.
   const form = new FormData()
   form.append('source', fs.createReadStream(imagePath))
   form.append('access_token', accessToken)
-  form.append('published', 'false')
+  form.append('message', fullMessage)
+  form.append('published', 'true')
 
-  const { data: photoData } = await axios.post(
-    `https://graph.facebook.com/v21.0/${pageId}/photos`,
-    form,
-    { headers: form.getHeaders(), timeout: 60000 }
-  )
-
-  const photoId = photoData.id
-  logger.info(`Photo uploaded, ID: ${photoId}`)
-
-  // Step 2a: Publish foto langsung dengan caption (paling andal untuk halaman,
-  // karena menghindari /feed + attached_media yang rawan error 400).
   try {
-    const { data: photoPost } = await axios.post(
-      `https://graph.facebook.com/v21.0/${photoId}`,
-      {
-        message: fullMessage,
-        published: true,
-        access_token: accessToken,
-      },
-      { timeout: 60000 }
+    const { data: photoData } = await axios.post(
+      `https://graph.facebook.com/v21.0/${pageId}/photos`,
+      form,
+      { headers: form.getHeaders(), timeout: 60000 }
     )
 
-    logger.info(`Photo post published! Post ID: ${photoPost.id || photoId}`)
-    return photoPost.id || photoId
-  } catch (photoErr: any) {
-    logger.warn(`Direct photo publish failed (${fbError(photoErr)}), trying feed post`)
+    logger.info(`Photo post published directly! Post ID: ${photoData.id}`)
+    return photoData.id
+  } catch (directErr: any) {
+    logger.warn(`Direct photo+message publish failed (${fbError(directErr)}), trying upload + feed post`)
 
-    // Step 2b: Fallback feed post dengan attached_media
+    // Cara 2: upload unpublished lalu attach ke feed post
+    const form2 = new FormData()
+    form2.append('source', fs.createReadStream(imagePath))
+    form2.append('access_token', accessToken)
+    form2.append('published', 'false')
+
+    const { data: photoData } = await axios.post(
+      `https://graph.facebook.com/v21.0/${pageId}/photos`,
+      form2,
+      { headers: form2.getHeaders(), timeout: 60000 }
+    )
+
+    const photoId = photoData.id
+    logger.info(`Photo uploaded, ID: ${photoId}`)
+
     const { data: postData } = await axios.post(
       `https://graph.facebook.com/v21.0/${pageId}/feed`,
       {
