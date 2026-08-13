@@ -4,7 +4,7 @@ import { loadConfig } from './config'
 import { scrapeArticles } from './scraper'
 import { processImage } from './image-processor'
 import { generateContent } from './ai-generator'
-import { postToFacebook } from './facebook-poster'
+import { postToFacebook, fbError } from './facebook-poster'
 import { loadHealth, saveHealth, recordSuccess, recordError, isHealthy, shouldSkipRun } from './health-check'
 import { logAnalytics } from './analytics'
 import { logger } from './utils/logger'
@@ -67,7 +67,7 @@ async function main(): Promise<void> {
       ...mlPool.slice(0, mlQuota),
       ...iqPool.slice(0, iqQuota),
       ...ykPool.slice(0, ykQuota),
-    ]
+    ].slice(0, config.maxPostsPerRun)
 
     logger.info(`ML posted so far: ${mlPosted}, quota: ${mlQuota}, iQ quota: ${iqQuota}, Youku quota: ${ykQuota}`)
 
@@ -153,16 +153,16 @@ Support me: ${randomAffLink()}`
 
         logger.info(`Completed [${i + 1}/${toProcess.length}] in ${Date.now() - startTime}ms`)
 
-        // Random delay between posts (1-3 minutes)
+        // Random delay between posts (5-10 minutes)
         if (i < toProcess.length - 1) {
-          const delay = 60000 + Math.random() * 120000
+          const delay = 300000 + Math.random() * 300000
           logger.info(`Waiting ${Math.round(delay / 1000)}s before next post...`)
           await new Promise(r => setTimeout(r, delay))
         }
       } catch (err: any) {
-        logger.error(`Failed processing article: ${err.message}`)
+        logger.error(`Failed processing article: ${fbError(err)}`)
 
-        const newHealth = recordError(loadHealth(), err.message)
+const newHealth = recordError(loadHealth(), fbError(err))
         saveHealth(newHealth)
 
         logAnalytics({
