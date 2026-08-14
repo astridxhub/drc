@@ -19,11 +19,27 @@ export async function postToFacebook(opts: PostOptions): Promise<string> {
 
   logger.info(`Posting to Facebook page ${pageId}`)
 
+  // Resolve Page Access Token. Jika token yang diberikan adalah USER token,
+  // tukar menjadi Page token (posting ke /photos butuh Page token, bukan user token).
+  let pageToken = accessToken
+  try {
+    const { data: page } = await axios.get(
+      `https://graph.facebook.com/v21.0/${pageId}`,
+      { params: { fields: 'access_token', access_token: accessToken }, timeout: 30000 }
+    )
+    if (page.access_token) {
+      pageToken = page.access_token
+      logger.info('Resolved Page Access Token from user token')
+    }
+  } catch (resolveErr: any) {
+    logger.warn(`Could not resolve page token (${fbError(resolveErr)}), using provided token as-is`)
+  }
+
   // Cara 1 (paling andal): upload foto + caption sekaligus dalam satu panggilan.
   // Menghindari publish terpisah (POST /{photoId}) yang ditolak error #3.
   const form = new FormData()
   form.append('source', fs.createReadStream(imagePath))
-  form.append('access_token', accessToken)
+  form.append('access_token', pageToken)
   form.append('message', fullMessage)
   form.append('published', 'true')
 
@@ -42,7 +58,7 @@ export async function postToFacebook(opts: PostOptions): Promise<string> {
     // Cara 2: upload unpublished lalu attach ke feed post
     const form2 = new FormData()
     form2.append('source', fs.createReadStream(imagePath))
-    form2.append('access_token', accessToken)
+    form2.append('access_token', pageToken)
     form2.append('published', 'false')
 
     const { data: photoData } = await axios.post(
@@ -59,7 +75,7 @@ export async function postToFacebook(opts: PostOptions): Promise<string> {
       {
         message: fullMessage,
         attached_media: JSON.stringify([{ media_fbid: photoId }]),
-        access_token: accessToken,
+        access_token: pageToken,
       },
       { timeout: 60000 }
     )
