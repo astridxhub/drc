@@ -3,5 +3,7 @@ dist/
 output/
 ai-raw.log
 logs/
-data/
+# data/posted.json di-commit sebagai persistensi dedup antar run
+data/*
+!data/posted.json
 .env

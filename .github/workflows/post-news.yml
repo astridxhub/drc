@@ -23,15 +23,6 @@ jobs:
           node-version: 24
           cache: 'npm'
 
-      - name: Restore dedup cache
-        id: cache-dedup
-        uses: actions/cache@v4
-        with:
-          path: data/posted.json
-          key: dedup-v1
-          restore-keys: |
-            dedup-v1
-
       - run: npm ci
 
       - run: npm run build
@@ -54,3 +45,18 @@ jobs:
           EOF
 
       - run: npm start
+
+      # Commit posted.json kembali ke repo sebagai persistensi dedup antar run.
+      # Strategi ini lebih andal daripada actions/cache yang bisa hilang,
+      # sehingga artikel yang sudah diposting tidak diposting ulang.
+      - name: Commit dedup data
+        run: |
+          if [ -f data/posted.json ] && [ -n "$(git status --porcelain -- data/posted.json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/posted.json
+            git commit -m "chore: update dedup posted data [skip ci]"
+            git push
+          else
+            echo "No changes to posted.json"
+          fi

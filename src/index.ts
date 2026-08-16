@@ -51,9 +51,16 @@ async function main(): Promise<void> {
 
     // Per-source allocation
     const mlPosted = countPostedBySource('mydramalist.com')
-    const mlPool = articles.filter(a => getSourceName(a.link) === 'MyDramaList' && !isAlreadyPosted(a.link))
-    const iqPool = articles.filter(a => getSourceName(a.link) === 'iQ.com' && !isAlreadyPosted(a.link))
-    const ykPool = articles.filter(a => getSourceName(a.link) === 'Youku.tv' && !isAlreadyPosted(a.link))
+    const mlPool = articles.filter(a => getSourceName(a.link) === 'MyDramaList' && !isAlreadyPosted(a.link, a.title))
+    const iqPool = articles.filter(a => getSourceName(a.link) === 'iQ.com' && !isAlreadyPosted(a.link, a.title))
+    const ykPool = articles.filter(a => getSourceName(a.link) === 'Youku.tv' && !isAlreadyPosted(a.link, a.title))
+
+    // Jika tidak ada artikel baru sama sekali, berhenti tanpa memposting apa pun
+    // (mencegah postingan berulang saat website target belum menambah konten baru).
+    if (mlPool.length === 0 && iqPool.length === 0 && ykPool.length === 0) {
+      logger.info('No new articles to post (semua artikel sudah pernah diposting). Skipping run.')
+      return
+    }
 
     // Phase 1: distribute 40 ML across runs (~7/run), Phase 2: all new ML
     const mlQuota = mlPosted >= 40
@@ -138,7 +145,7 @@ Support me: ${randomAffLink()}`
         })
 
         // Mark as posted + record success
-        markAsPosted(article.link)
+        markAsPosted(article.link, article.title)
         const newHealth = recordSuccess(loadHealth())
         saveHealth(newHealth)
 
