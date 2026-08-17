@@ -32,7 +32,8 @@ function load(): Map<string, PostedEntry> {
   if (_cache) return _cache
   try {
     if (fs.existsSync(POSTED_FILE)) {
-      const data: any[] = JSON.parse(fs.readFileSync(POSTED_FILE, 'utf-8'))
+      const raw = fs.readFileSync(POSTED_FILE, 'utf-8').replace(/^\uFEFF/, '')
+      const data: any[] = JSON.parse(raw)
       _cache = new Map()
       for (const item of data) {
         // Entri lama berbentuk string (link) -> kunci l:<link>.
