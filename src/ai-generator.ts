@@ -31,13 +31,13 @@ Buat object JSON dengan format:
 
 Aturan sinopsis:
 - WAJIB Bahasa Indonesia. JANGAN pernah menggunakan Bahasa Inggris.
-- 1 paragraf pendek sinopsis drama yang menarik dalam Bahasa Indonesia
-- HANYA sinopsis cerita, jangan sertakan genre/tahun/episode/rating/rank
+- 1 paragraf pendek sinopsis short drama yang menarik dalam Bahasa Indonesia
+- HANYA sinopsis cerita, jangan sertakan genre/jumlah episode/rating
 - Jangan emoji
 - Jangan ulang judul
 
 Aturan hashtags:
-- 10 hashtag relevan (termasuk #kdrama #dracin #dramakorea atau #dramachina sesuai negara)
+- 10 hashtag relevan, sertakan #shortdrama #dramapendek #dramashort (atau #dramakorea #dramachina sesuai negara) dan #dracin
 - Huruf kecil semua`
 
   const userPrompt = `Judul: ${articleTitle}
@@ -165,7 +165,7 @@ function tryParseJson(content: string): any | null {
 
 function generateFallback(_title: string, category: string, _sourceName: string, _rating?: string, _ranking?: string, _metadata?: string): AiResponse {
   const country = category.toLowerCase()
-  const countryTag = country === 'korean' ? '#kdrama' : country === 'chinese' ? '#dramachina' : '#drama'
+  const countryTag = country === 'korean' ? '#kdrama' : country === 'chinese' ? '#dramachina' : '#shortdrama'
 
   const description = _title
 
@@ -174,10 +174,9 @@ function generateFallback(_title: string, category: string, _sourceName: string,
   const hashtags = [
     countryTag,
     '#dracin',
-    '#dramarekomendasi',
-    '#dramaseries',
-    '#myDramaList',
-    '#ratingtinggi',
+    '#shortdrama',
+    '#dramapendek',
+    '#dramashort',
     '#sinopsis',
     ...(_rating ? ['#dramapopuler'] : []),
     ...uniqueWords.map(w => `#${w}`),

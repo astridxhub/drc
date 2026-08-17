@@ -2,14 +2,10 @@ name: Post Drama to Facebook
 
 on:
   schedule:
-    # Jadwal MovieFeed: 09, 10, 13, 15, 19, 21 WIB
-    #  09:00 WIB → 02:00 UTC
-    #  10:00 WIB → 03:00 UTC
-    #  13:00 WIB → 06:00 UTC
-    #  15:00 WIB → 08:00 UTC
-    #  19:00 WIB → 12:00 UTC
-    #  21:00 WIB → 14:00 UTC
-    - cron: '0 2,3,6,8,12,14 * * *'
+    # Jadwal Short Drama: 12:00 & 18:00 WIB (UTC+7)
+    #  12:00 WIB → 05:00 UTC
+    #  18:00 WIB → 11:00 UTC
+    - cron: '0 5,11 * * *'
   workflow_dispatch:
 
 jobs:
@@ -36,9 +32,9 @@ jobs:
           AI_MODEL=${{ secrets.AI_MODEL }}
           FACEBOOK_PAGE_ID=${{ secrets.FACEBOOK_PAGE_ID }}
           FACEBOOK_ACCESS_TOKEN=${{ secrets.FACEBOOK_ACCESS_TOKEN }}
-          POST_INTERVAL_HOURS=4
-          MAX_POSTS_PER_RUN=3
-          NEWS_SOURCE_URLS=https://mydramalist.com/shows/popular,https://mydramalist.com/shows/upcoming,https://www.iq.com/newOnline?lang=id_id,https://youku.tv/channel/webtv
+          POST_INTERVAL_HOURS=8
+          MAX_POSTS_PER_RUN=6
+          NEWS_SOURCE_URLS=https://www.dramabox.com/browse,https://www.moboreels.com/dramas,https://www.reelshort.com/shelf/new-release-short-movies-dramas-51001290
           IMAGE_WIDTH=800
           IMAGE_HEIGHT=1200
           IMAGE_STYLE=${{ secrets.IMAGE_STYLE }}

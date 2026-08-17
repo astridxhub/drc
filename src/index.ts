@@ -8,15 +8,15 @@ import { postToFacebook, fbError } from './facebook-poster'
 import { loadHealth, saveHealth, recordSuccess, recordError, isHealthy, shouldSkipRun } from './health-check'
 import { logAnalytics } from './analytics'
 import { logger } from './utils/logger'
-import { isAlreadyPosted, markAsPosted, countPostedBySource } from './dedup'
+import { isAlreadyPosted, markAsPosted } from './dedup'
 
 const AFF_LINKS_FILE = path.join(process.cwd(), 'assets', 'linkaff.txt')
 
 function getSourceName(link: string): string {
-  if (link.includes('mydramalist.com')) return 'MyDramaList'
-  if (link.includes('iq.com')) return 'iQ.com'
-  if (link.includes('youku.tv') || link.includes('youku.com')) return 'Youku.tv'
-  return 'MyDramaList'
+  if (link.includes('dramabox.com')) return 'DramaBox'
+  if (link.includes('moboreels.com')) return 'MoboReels'
+  if (link.includes('reelshort.com')) return 'ReelShort'
+  return 'Short Drama'
 }
 
 function randomAffLink(): string {
@@ -49,34 +49,29 @@ async function main(): Promise<void> {
     // Scrape articles
     const articles = await scrapeArticles(config.newsSourceUrls)
 
-    // Per-source allocation
-    const mlPosted = countPostedBySource('mydramalist.com')
-    const mlPool = articles.filter(a => getSourceName(a.link) === 'MyDramaList' && !isAlreadyPosted(a.link, a.title))
-    const iqPool = articles.filter(a => getSourceName(a.link) === 'iQ.com' && !isAlreadyPosted(a.link, a.title))
-    const ykPool = articles.filter(a => getSourceName(a.link) === 'Youku.tv' && !isAlreadyPosted(a.link, a.title))
+    // Per-source allocation: 2 posting per sumber short drama per run
+    const dbPool = articles.filter(a => getSourceName(a.link) === 'DramaBox' && !isAlreadyPosted(a.link, a.title))
+    const mrPool = articles.filter(a => getSourceName(a.link) === 'MoboReels' && !isAlreadyPosted(a.link, a.title))
+    const rsPool = articles.filter(a => getSourceName(a.link) === 'ReelShort' && !isAlreadyPosted(a.link, a.title))
 
     // Jika tidak ada artikel baru sama sekali, berhenti tanpa memposting apa pun
     // (mencegah postingan berulang saat website target belum menambah konten baru).
-    if (mlPool.length === 0 && iqPool.length === 0 && ykPool.length === 0) {
-      logger.info('No new articles to post (semua artikel sudah pernah diposting). Skipping run.')
+    if (dbPool.length === 0 && mrPool.length === 0 && rsPool.length === 0) {
+      logger.info('No new short drama to post (semua sudah pernah diposting). Skipping run.')
       return
     }
 
-    // Phase 1: distribute 40 ML across runs (~7/run), Phase 2: all new ML
-    const mlQuota = mlPosted >= 40
-      ? mlPool.length
-      : Math.min(7, Math.max(0, 40 - mlPosted), mlPool.length)
-
-    const iqQuota = Math.min(2, iqPool.length)
-    const ykQuota = Math.min(2, ykPool.length)
+    const dbQuota = Math.min(2, dbPool.length)
+    const mrQuota = Math.min(2, mrPool.length)
+    const rsQuota = Math.min(2, rsPool.length)
 
     const toProcess = [
-      ...mlPool.slice(0, mlQuota),
-      ...iqPool.slice(0, iqQuota),
-      ...ykPool.slice(0, ykQuota),
+      ...dbPool.slice(0, dbQuota),
+      ...mrPool.slice(0, mrQuota),
+      ...rsPool.slice(0, rsQuota),
     ].slice(0, config.maxPostsPerRun)
 
-    logger.info(`ML posted so far: ${mlPosted}, quota: ${mlQuota}, iQ quota: ${iqQuota}, Youku quota: ${ykQuota}`)
+    logger.info(`DramaBox quota: ${dbQuota}, MoboReels quota: ${mrQuota}, ReelShort quota: ${rsQuota}`)
 
     // Ensure output dir
     const outputDir = path.join(process.cwd(), 'output')
@@ -107,7 +102,7 @@ async function main(): Promise<void> {
 
         const synopsis = aiResponse.description.replace(/\s*(?:Korean|Chinese|Japanese|Taiwanese|Thai)\s*(?:Drama|Movie)\s*-\s*\d{4}.*?(?:\n|$)/i, '').trim()
         const year = article.date
-        const epsMatch = article.metadata?.match(/(\d+\s*episodes)/i)
+        const epsMatch = article.metadata?.match(/(\d+\s*episode)/i)
         const episodes = epsMatch ? epsMatch[1] : ''
         const infoParts = [article.category, year, episodes, article.rating ? `Rating: ${article.rating}/10` : '', article.ranking ? `Rank: ${article.ranking}` : ''].filter(Boolean)
         const desc = `${article.title}
