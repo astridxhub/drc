@@ -15,7 +15,7 @@ interface PostOptions {
 export async function postToFacebook(opts: PostOptions): Promise<string> {
   const { pageId, accessToken, imagePath, description, hashtags, articleLink } = opts
 
-  const fullMessage = `${description}\n\n${hashtags.join(' ')}\n\nBaca selengkapnya: ${articleLink}`
+  const fullMessage = `${description}\n\n${hashtags.join(' ')}\n\nTonton disini: ${articleLink}`
 
   logger.info(`Posting to Facebook page ${pageId}`)
 
